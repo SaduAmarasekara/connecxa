@@ -6,7 +6,7 @@ export default function NetworkingToolkit() {
   return (
     <section className="w-full py-24 bg-white overflow-hidden" style={{ fontFamily: "'DM Sans', 'Helvetica Neue', sans-serif" }}>
       <div className="w-full max-w-[1600px] mx-auto px-6 lg:px-12">
-        
+
         {/* ── Header ── */}
         <div className="text-center mb-20 flex flex-col items-center">
           <h2 className="text-[38px] md:text-[50px] font-extrabold text-[#111827] tracking-tight leading-tight mb-4 flex items-center justify-center gap-3">
@@ -20,7 +20,7 @@ export default function NetworkingToolkit() {
 
         {/* ── Grid ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mb-32">
-          
+
           {/* Card 1: Multi-Profile Display */}
           <div className="flex flex-col group">
             {/* Visual Area */}
@@ -69,11 +69,11 @@ export default function NetworkingToolkit() {
               </div>
               {/* QR icon float */}
               <div className="absolute top-[20%] right-[15%] w-14 h-14 bg-[#C6F6D5] rounded-xl flex items-center justify-center text-green-700 font-bold shadow-lg transform rotate-6 group-hover:rotate-12 transition-transform">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /></svg>
               </div>
               {/* Share float */}
               <div className="absolute bottom-[10%] left-[15%] w-16 h-16 bg-[#FF5C00] rounded-xl flex items-center justify-center text-white shadow-xl transform -rotate-6 group-hover:-rotate-12 group-hover:scale-110 transition-transform">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/></svg>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h6v6" /><path d="M10 14L21 3" /><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" /></svg>
               </div>
             </div>
             <h3 className="text-[22px] font-bold text-[#111827] mb-2 tracking-tight">Scan to Connect</h3>
@@ -85,7 +85,7 @@ export default function NetworkingToolkit() {
           {/* Card 3: OCR Scanner */}
           <div className="flex flex-col group">
             <div className="w-full h-[280px] rounded-[32px] bg-[#f8f9fb] flex items-center justify-center relative overflow-hidden mb-6 group-hover:-translate-y-2 transition-transform duration-300 gap-2">
-              
+
               <div className="w-[70px] h-[160px] bg-[#FFD028] rounded-l-xl -ml-16"></div>
 
               {/* Phone Mockup */}
@@ -94,7 +94,7 @@ export default function NetworkingToolkit() {
                 {/* Screen Content */}
                 <div className="w-full h-full bg-[#E2E8F0] mt-1 flex flex-col items-center justify-center p-2">
                   <div className="text-[9px] font-bold text-gray-400 mb-2">Scan name card</div>
-                  
+
                   {/* Business card inside phone */}
                   <div className="w-[140px] h-[80px] bg-white rounded-md shadow-md p-2 flex flex-col justify-center relative">
                     {/* Scanner corners */}
@@ -102,7 +102,7 @@ export default function NetworkingToolkit() {
                     <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-[#0066FF]"></div>
                     <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-[#0066FF]"></div>
                     <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#0066FF]"></div>
-                    
+
                     <div className="font-bold text-[10px]">Elizabeth Bennet</div>
                     <div className="text-[7px] text-gray-500 mb-1">CEO</div>
                     <div className="text-[6px] text-gray-400">+65 9123 4567</div>
@@ -185,16 +185,16 @@ export default function NetworkingToolkit() {
           {/* Card 6: Custom Link-in-Bio */}
           <div className="flex flex-col group">
             <div className="w-full h-[280px] rounded-[32px] bg-[#f8f9fb] flex items-center justify-center relative overflow-hidden mb-6 group-hover:-translate-y-2 transition-transform duration-300">
-              
+
               <div className="absolute w-[60px] h-[60px] bg-blue-600 rounded-2xl left-[10%] top-[40%] flex items-center justify-center text-white font-bold text-[24px] shadow-lg transform -rotate-12 group-hover:-rotate-6 transition-all">f</div>
               <div className="absolute w-[50px] h-[50px] bg-black rounded-xl left-[25%] top-[15%] flex items-center justify-center text-white font-bold text-[18px] shadow-lg transform rotate-6">T</div>
               <div className="absolute w-[50px] h-[50px] bg-[#FFFC00] rounded-xl left-[45%] top-[10%] flex items-center justify-center shadow-lg transform -rotate-3">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2"><path d="M12 20s-8-4.5-8-10.5a8 8 0 0 1 16 0c0 6-8 10.5-8 10.5z"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2"><path d="M12 20s-8-4.5-8-10.5a8 8 0 0 1 16 0c0 6-8 10.5-8 10.5z" /></svg>
               </div>
               <div className="absolute w-[70px] h-[30px] bg-black rounded-[10px] right-[10%] top-[30%] flex items-center justify-center shadow-lg">
                 <div className="w-4 h-4 rounded-full bg-[#1DB954]"></div>
               </div>
-              
+
               <div className="absolute w-[100px] h-[36px] bg-[#FF5C00] rounded-xl right-[28%] top-[35%] flex items-center justify-center shadow-xl z-10 transform -rotate-3 group-hover:scale-110 transition-transform">
                 <span className="text-white text-[11px] font-black tracking-wide">OneGoodCard</span>
               </div>
@@ -219,8 +219,8 @@ export default function NetworkingToolkit() {
         </div>
 
         {/* ── OGC FOR TEAMS Section ── */}
-        <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-16 py-12 lg:pt-16 lg:pb-0">
-          
+        <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-24 py-12 lg:pt-16 lg:pb-0">
+
           {/* Left: Text Content */}
           <div className="flex-1 w-full max-w-[500px]">
             <div className="text-[13px] font-black text-[#0066FF] tracking-[0.1em] mb-4 uppercase">
@@ -239,13 +239,13 @@ export default function NetworkingToolkit() {
             <div className="flex flex-col gap-4 text-[#4B5563] text-[15px] font-medium">
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 shrink-0 flex items-center justify-center text-[#0066FF]">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
                 </div>
                 Bulk manage digital name cards for your company
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 shrink-0 flex items-center justify-center text-[#0066FF]">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
                 </div>
                 Gain insights into the performance of team members
               </div>
@@ -258,8 +258,8 @@ export default function NetworkingToolkit() {
               {/* Sidebar */}
               <div className="w-[80px] md:w-[130px] bg-white border-r border-gray-100 flex flex-col items-center py-6">
                 <div className="w-10 h-10 md:w-14 md:h-14 bg-[#0066FF] rounded-lg md:rounded-2xl text-white font-bold flex items-center justify-center text-[18px] md:text-[24px] mb-4">G</div>
-                <div className="hidden md:block font-bold text-[12px] mb-8 text-center px-2">Connecxa Team<br/><span className="text-[9px] text-gray-400 font-normal">Team · OGT-1234</span></div>
-                
+                <div className="hidden md:block font-bold text-[12px] mb-8 text-center px-2">Connecxa Team<br /><span className="text-[9px] text-gray-400 font-normal">Team · OGT-1234</span></div>
+
                 <div className="w-full flex flex-col gap-1 px-3">
                   <div className="w-full h-8 bg-gray-50 rounded text-gray-400 flex items-center justify-center md:justify-start md:px-3 text-[10px] font-bold"><span className="hidden md:block">Home</span></div>
                   <div className="w-full h-8 bg-[#0066FF] rounded text-white shadow-sm flex items-center justify-center md:justify-start md:px-3 text-[10px] font-bold"><span className="hidden md:block">Business Cards</span></div>
@@ -267,11 +267,11 @@ export default function NetworkingToolkit() {
                   <div className="w-full h-8 bg-transparent text-gray-400 flex items-center justify-center md:justify-start md:px-3 text-[10px] font-bold"><span className="hidden md:block">Employees</span></div>
                 </div>
               </div>
-              
+
               {/* Main Content Area */}
               <div className="flex-1 p-4 md:p-6 overflow-hidden flex flex-col">
                 <h3 className="text-[18px] md:text-[22px] font-bold mb-4">Business Cards</h3>
-                
+
                 {/* Horizontal boxes */}
                 <div className="flex gap-4 mb-6">
                   <div className="flex-1 h-24 bg-white rounded-xl border border-gray-100 shadow-sm flex flex-col">
@@ -295,9 +295,9 @@ export default function NetworkingToolkit() {
                   <div className="flex-1 hidden md:block">Designation</div>
                   <div className="flex-1 hidden md:block">Group</div>
                 </div>
-                
+
                 <div className="flex-1 flex flex-col gap-2 pt-2">
-                  {[1,2,3].map((_, i) => (
+                  {[1, 2, 3].map((_, i) => (
                     <div key={i} className="w-full h-12 bg-white rounded-lg border border-gray-50 flex items-center px-2 gap-4 shadow-sm">
                       <div className="w-4 h-4 rounded-sm border border-blue-200 bg-blue-50 flex items-center justify-center"><div className="w-2 h-2 bg-blue-500 rounded-xs"></div></div>
                       <div className="flex-1 flex items-center gap-2">
@@ -325,7 +325,7 @@ export default function NetworkingToolkit() {
                     <div className="w-4 h-[40%] bg-[#0066FF] rounded-t-sm"></div>
                     <div className="w-4 h-[100%] bg-[#0066FF] rounded-t-sm relative">
                       <div className="absolute -top-6 -right-2 bg-gray-900 text-white text-[8px] px-1.5 py-0.5 rounded flex items-center gap-1 font-bold shadow-lg whitespace-nowrap">
-                         <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div> Profile Views 101
+                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div> Profile Views 101
                       </div>
                     </div>
                     <div className="w-4 h-[80%] bg-[#0066FF] rounded-t-sm"></div>

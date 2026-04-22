@@ -4,7 +4,49 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { label: "Shop", hasDropdown: true },
+  { 
+    label: "Shop", 
+    hasDropdown: true,
+    dropdown: [
+      {
+        title: "NFC Business Cards",
+        desc: "Seamless connections with one-tap",
+        icon: (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M4.9 19.1C3.1 17.3 2 14.8 2 12c0-2.8 1.1-5.3 2.9-7.1" />
+            <path d="M8.4 15.6c-.9-.9-1.5-2.2-1.5-3.6 0-1.4.6-2.7 1.5-3.6" />
+            <path d="M12 12h.01" />
+            <path d="M15.6 15.6c.9-.9 1.5-2.2 1.5-3.6 0-1.4-.6-2.7-1.5-3.6" />
+            <path d="M19.1 19.1c1.8-1.8 2.9-4.3 2.9-7.1 0-2.8-1.1-5.3-2.9-7.1" />
+          </svg>
+        ),
+        href: "/shop"
+      },
+      {
+        title: "Accessories and Bundles",
+        desc: "Practical add-ons for seamless sharing",
+        icon: (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="2" y="6" width="14" height="16" rx="2" ry="2" transform="rotate(-10 2 6)" />
+            <rect x="8" y="2" width="14" height="16" rx="2" ry="2" />
+          </svg>
+        ),
+        href: "/shop"
+      },
+      {
+        title: "All Products",
+        desc: "Explore everything Connecxa offers",
+        icon: (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+            <path d="M3 6h18" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
+        ),
+        href: "/shop"
+      }
+    ]
+  },
   { label: "Features", hasDropdown: true },
   { label: "For Companies", hasDropdown: true },
   { label: "Contact Us", hasDropdown: false },
@@ -275,10 +317,29 @@ export default function Navbar() {
 
               <div className="desktop-links">
                 {navLinks.map((link) => (
-                  <button key={link.label} className="nav-link">
-                    {link.label}
-                    {link.hasDropdown && <span className="chevron">▼</span>}
-                  </button>
+                  <div key={link.label} className="group relative">
+                    <button className="nav-link">
+                      {link.label}
+                      {link.hasDropdown && <span className="chevron">▼</span>}
+                    </button>
+                    {link.dropdown && (
+                      <div className="absolute top-[100%] left-0 pt-3 hidden group-hover:block z-50">
+                        <div className="bg-white rounded-[20px] shadow-[0_12px_40px_rgba(0,0,0,0.12)] border border-gray-100 p-3 w-[360px] flex flex-col gap-1">
+                          {link.dropdown.map((item, i) => (
+                            <Link href={item.href} key={i} className="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer" style={{ textDecoration: 'none' }}>
+                              <div className="w-[48px] h-[48px] bg-[#0066FF] rounded-lg flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+                                {item.icon}
+                              </div>
+                              <div className="flex flex-col">
+                                <div className="text-[15.5px] font-bold text-[#111827] leading-tight mb-1 font-sans">{item.title}</div>
+                                <div className="text-[13px] text-gray-500 font-medium leading-[1.4] font-sans">{item.desc}</div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>

@@ -30,7 +30,7 @@ export default function Home() {
                 {/* Eyebrow tag */}
                 <div className="inline-flex w-fit items-center gap-2 bg-white/15 border border-white/20 rounded-full px-4 py-1.5 text-[12px] font-bold tracking-[0.15em] uppercase text-white/90">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#FF5C00] animate-pulse" />
-                
+
                 </div>
 
                 <div className="space-y-5">
@@ -134,12 +134,12 @@ export default function Home() {
 
       {/* ── Sections ── */}
       <CardShowcase />
-      
+
       {/* Spacer between CardShowcase and Workflow */}
       <div className="w-full h-24 lg:h-32 bg-white" />
-      
+
       <Workflow />
-      
+
       {/* Spacer between Workflow and ProfilesShowcase */}
       <div className="w-full h-24 lg:h-32 bg-[#F4F4F4]" />
 
@@ -152,11 +152,11 @@ export default function Home() {
 
       {/* Spacer between NetworkingToolkit and FAQ */}
       <div className="w-full h-24 lg:h-32 bg-white" />
-      
+
       <FAQ />
 
       {/* Spacer between FAQ and Footer */}
-      <div className="w-full h-32 lg:h-40 bg-white" />
+      <div className="w-full h-24 lg:h-32 bg-white" />
     </div>
   );
 }
