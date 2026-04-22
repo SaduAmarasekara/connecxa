@@ -311,6 +311,7 @@ export default function CardShowcase() {
               overflowX: "auto",
               paddingBottom: 48,
               scrollSnapType: "x mandatory",
+              justifyContent: "center",
             }}
           >
             {cards.map((card) => {
@@ -569,75 +570,7 @@ export default function CardShowcase() {
             })}
           </div>
 
-          {/* Carousel Arrow — original: absolute right-0 top-1/3 rounded-l-full backdrop-blur */}
-          <button
-            className="carousel-arrow"
-            onClick={() => scrollTo(Math.min(scrollIdx + 1, cards.length - 1))}
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </button>
 
-          {/* Pagination Dots */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 8,
-              marginTop: 8,
-            }}
-          >
-            {/* Active dot */}
-            <div
-              onClick={() => scrollTo(0)}
-              style={{
-                height: 10,
-                width: scrollIdx === 0 ? 28 : 10,
-                borderRadius: 99,
-                background: scrollIdx === 0 ? "#111827" : "#E5E7EB",
-                transition: "all 0.3s ease",
-                cursor: "pointer",
-              }}
-            />
-            {/* dots for each card beyond first */}
-            {cards.slice(1).map((_, i) => (
-              <div
-                key={i + 1}
-                onClick={() => scrollTo(i + 1)}
-                style={{
-                  height: 10,
-                  width: scrollIdx === i + 1 ? 28 : 10,
-                  borderRadius: 99,
-                  background: scrollIdx === i + 1 ? "#111827" : "#E5E7EB",
-                  transition: "all 0.3s ease",
-                  cursor: "pointer",
-                }}
-              />
-            ))}
-            {/* extra static dots (original has 7 total) */}
-            {[0, 1, 2].map((i) => (
-              <div
-                key={`s${i}`}
-                style={{
-                  width: 10,
-                  height: 10,
-                  borderRadius: "50%",
-                  background: "#E5E7EB",
-                }}
-              />
-            ))}
-          </div>
         </div>
 
         {/* View All — original: mt-12 flex justify-end */}

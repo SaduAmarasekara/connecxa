@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function NetworkingToolkit() {
   return (
     <section className="w-full py-24 bg-white overflow-hidden" style={{ fontFamily: "'DM Sans', 'Helvetica Neue', sans-serif" }}>
-      <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-8">
+      <div className="w-full max-w-[1600px] mx-auto px-6 lg:px-12">
         
         {/* ── Header ── */}
         <div className="text-center mb-20 flex flex-col items-center">
