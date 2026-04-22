@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 
 export default function NetworkingToolkit() {
   return (
@@ -227,7 +226,7 @@ export default function NetworkingToolkit() {
               OGC For Teams
             </div>
             <h2 className="text-[36px] md:text-[44px] font-bold text-[#111827] leading-[1.1] tracking-tight mb-6">
-              Empower your Team's<br />Digital Identity
+              Empower your Team&apos;s<br />Digital Identity
             </h2>
             <p className="text-[17px] text-[#6B7280] font-medium leading-[1.6] mb-8">
               Easily manage digital business cards across your team - all from one centralised dashboard. Complete with powerful admin tools and real-time insights.

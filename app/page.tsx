@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Footer from "@/components/Footer";
 import CardShowcase from "@/components/CardShowcase";
 import Workflow from "@/components/Workflow";
 import FAQ from "@/components/FAQ";

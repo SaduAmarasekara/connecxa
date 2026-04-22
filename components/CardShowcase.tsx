@@ -205,31 +205,8 @@ const tabs = ["All Cards", "Premium Cards", "Matte Cards", "Glossy Cards"];
 export default function CardShowcase() {
   const [activeTab, setActiveTab] = useState<number>(0);
   const [activeColors, setActiveColors] = useState<Record<string, number>>({});
-  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [scrollIdx, setScrollIdx] = useState<number>(0);
 
-  const handleScroll = () => {
-    if (!scrollRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-    const total = cards.length;
-    const idx = Math.round(
-      (scrollLeft / (scrollWidth - clientWidth)) * (total - 1),
-    );
-    setScrollIdx(idx);
-  };
-
-  const scrollTo = (idx: number) => {
-    if (!scrollRef.current) return;
-    const card = scrollRef.current.children[idx] as HTMLElement | undefined;
-    if (card)
-      card.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "center",
-      });
-    setScrollIdx(idx);
-  };
 
   return (
     <section
@@ -304,7 +281,6 @@ export default function CardShowcase() {
           <div
             ref={scrollRef}
             className="no-scrollbar"
-            onScroll={handleScroll}
             style={{
               display: "flex",
               gap: 32,
@@ -321,8 +297,6 @@ export default function CardShowcase() {
                 <div
                   key={card.id}
                   className="card-wrap"
-                  onMouseEnter={() => setHoveredCard(card.id)}
-                  onMouseLeave={() => setHoveredCard(null)}
                   style={{
                     minWidth: 300,
                     maxWidth: 380,
