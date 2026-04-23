@@ -47,7 +47,71 @@ const navLinks = [
       }
     ]
   },
-  { label: "Features", hasDropdown: true },
+  { 
+    label: "Features", 
+    hasDropdown: true,
+    dropdown: [
+      {
+        title: "Digital Business Cards",
+        desc: "Designed for the modern digital age",
+        icon: (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="3" y="4" width="18" height="16" rx="2" />
+            <circle cx="9" cy="10" r="2" />
+            <path d="M15 8h2" />
+            <path d="M15 12h2" />
+            <path d="M7 16h10" />
+          </svg>
+        ),
+        href: "/features/digital-business-cards"
+      },
+      {
+        title: "Contact Manager",
+        desc: "Keep your connections synced and sorted",
+        icon: (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M4 4v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2Z" />
+            <path d="M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+            <path d="M6 21v-1a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v1" />
+            <path d="M18 2h1" strokeOpacity="0.5" />
+            <path d="M18 6h1" strokeOpacity="0.5" />
+            <path d="M18 10h1" strokeOpacity="0.5" />
+            <path d="M18 14h1" strokeOpacity="0.5" />
+          </svg>
+        ),
+        href: "/features/contact-manager"
+      },
+      {
+        title: "CRM Deal Manager",
+        desc: "Track, manage, and close deals on the go",
+        icon: (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m11 17 2 2 4-4" />
+            <path d="m3 17 2 2 4-4" />
+            <path d="M13 3.7a4 4 0 0 0-8 0" />
+            <path d="M21 3.7a4 4 0 0 0-8 0" />
+            <path d="M21 9v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9" />
+            <path d="m3 9 4.5 4.5" />
+            <path d="m21 9-4.5 4.5" />
+          </svg>
+        ),
+        href: "/features/crm-deal-manager"
+      },
+      {
+        title: "Centralised Team Dashboard",
+        desc: "Admin tools for company-wide management",
+        icon: (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+        ),
+        href: "/features/team-dashboard"
+      }
+    ]
+  },
   { label: "For Companies", hasDropdown: true },
   { label: "Contact Us", hasDropdown: false },
   { label: "Resources", hasDropdown: true },
