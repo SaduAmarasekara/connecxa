@@ -159,20 +159,20 @@ export default function Navbar() {
         .nav-inner {
           max-width: 1600px;
           margin: 0 auto;
-          padding: 20px 40px;
+          padding: 16px 40px;
           display: flex;
           align-items: center;
           justify-content: space-between;
           gap: 24px;
           transition: padding 0.3s ease;
         }
-        .nav-inner.scrolled { padding: 14px 40px; }
+        .nav-inner.scrolled { padding: 10px 40px; }
 
         /* Logo */
         .logo-wrap {
           position: relative;
-          height: 72px;
-          width: 220px;
+          height: 80px;
+          width: 240px;
           flex-shrink: 0;
           transition: transform 0.25s ease;
           display: block;
@@ -357,7 +357,7 @@ export default function Navbar() {
         .mobile-nav-link:hover { color: #0066FF; }
 
         @media (max-width: 1100px) { .desktop-links { display: none; } .nav-divider { display: none; } }
-        @media (max-width: 640px) { .btn-demo { display: none; } .nav-inner { padding: 14px 20px; } .nav-inner.scrolled { padding: 10px 20px; } .logo-wrap { width: 160px; height: 56px; } }
+        @media (max-width: 640px) { .btn-demo { display: none; } .nav-inner { padding: 10px 20px; } .nav-inner.scrolled { padding: 8px 20px; } .logo-wrap { width: 180px; height: 64px; } }
         @media (max-width: 1100px) { .hamburger { display: flex; } }
       `}</style>
 

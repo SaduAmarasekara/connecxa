@@ -3,7 +3,7 @@
 
 export default function NetworkingToolkit() {
   return (
-    <section className="w-full py-24 bg-white overflow-hidden" style={{ fontFamily: "'DM Sans', 'Helvetica Neue', sans-serif"  ,margin: "0 auto", textAlign: "center" }}>
+    <section className="w-full py-24 bg-white overflow-hidden" style={{ fontFamily: "'DM Sans', 'Helvetica Neue', sans-serif", textAlign: "center", margin: "0 100px" }}>
       <div className="w-full max-w-[1600px] mx-auto px-6 lg:px-12">
 
         {/* ── Header ── */}

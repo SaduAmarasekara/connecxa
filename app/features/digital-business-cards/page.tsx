@@ -3,6 +3,10 @@
 import React from 'react';
 import SmarterConnect from "@/components/SmarterConnect";
 import ProfilesShowcase from "@/components/ProfilesShowcase";
+import FeatureGrid from "@/components/FeatureGrid";
+import SecuritySection from "@/components/SecuritySection";
+import ProductShowcase from "@/components/ProductShowcase";
+import FAQ from '@/components/FAQ';
 
 export default function DigitalBusinessCards() {
   return (
@@ -99,10 +103,10 @@ export default function DigitalBusinessCards() {
             <p className="text-[19px] text-[#4a4a4a] leading-[1.65] mb-10 max-w-[480px]">
               Make every impression count with a sleek, modern digital business card — no apps, no limits, just your brand at its best.
             </p>
-            <button className="flex items-center gap-[10px] bg-white text-[#111] text-[17px] font-bold rounded-[50px] px-9 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 transition-all w-fit cursor-pointer outline-none border-none">
-              Get Started
-              <span className="text-[20px] leading-none">→</span>
-            </button>
+           <button className="flex items-center gap-[15px] bg-white text-[#111] text-[30px] font-black rounded-[50px] px-12 py-5 shadow-[0_16px_48px_rgba(0,0,0,0.10)] hover:shadow-[0_24px_56px_rgba(0,0,0,0.16)] hover:-translate-y-1 transition-all w-fit cursor-pointer outline-none border-none mt-20">
+  Get Started
+  <span className="text-[25px] leading-none">→</span>
+</button>
           </div>
 
           {/* Right Mockup */}
@@ -216,8 +220,25 @@ export default function DigitalBusinessCards() {
       <div className="w-full">
         <div className="w-full h-24 lg:h-32 bg-white" />
         <ProfilesShowcase />
-         <div className="w-full h-24 lg:h-32 bg-white" />
+        <div className="w-full h-24 lg:h-32 bg-white" />
+        
+        {/* Product Showcase Section */}
+        <ProductShowcase />
+        
+        <div className="w-full h-24 lg:h-32 bg-white" />
         <SmarterConnect />
+        <div className="w-full h-24 lg:h-32 bg-white" />
+        
+        {/* Explore More Powerful Tools Section */}
+        <FeatureGrid />
+        
+        <div className="w-full h-24 lg:h-32 bg-white" />
+
+        {/* Security Section */}
+        <SecuritySection />
+
+        <div className="w-full h-24 lg:h-32 bg-white" />
+        <FAQ />
         <div className="w-full h-24 lg:h-32 bg-white" />
       </div>
     </main>
