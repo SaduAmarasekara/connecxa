@@ -16,7 +16,7 @@ export default function ShopPage() {
         <div className="w-full max-w-[1600px] px-6 lg:px-12">
           {/* Blue Hero Card */}
           <div
-            className="relative flex flex-col lg:flex-row items-center lg:items-stretch overflow-hidden bg-[#1C5996] text-white rounded-[32px] md:rounded-[48px] shadow-[0_20px_60px_rgba(28,89,150,0.3)] w-full"
+            className="relative flex flex-col lg:flex-row items-center lg:items-stretch overflow-hidden bg-[#005AD1] text-white rounded-[32px] md:rounded-[48px] shadow-[0_20px_60px_rgba(28,89,150,0.3)] w-full"
             style={{
               minHeight: 660,
               paddingTop: "clamp(40px,5vw,80px)",
@@ -769,7 +769,7 @@ export default function ShopPage() {
           </div>
         </div>
       </main>
-     
+
       <div className="w-full h-24 lg:h-32 bg-white" />
       <NutshellFeatures />
       <div className="w-full h-24 lg:h-32 bg-white" />
