@@ -70,9 +70,34 @@ const CorporateBranding = () => {
             Let's elevate your brand presence with customised NFC business cards - made exactly the way you want them.
           </p>
 
-          <button className="bg-[#005AD1] hover:bg-[#0052CC] text-white px-8 py-4 rounded-full font-bold text-[18px] flex items-center justify-center gap-3 w-fit transition-all hover:scale-105 shadow-lg shadow-blue-200 mb-12">
+          <button 
+            style={{
+              background: "#005AD1",
+              color: "#fff",
+              fontSize: 18,
+              fontWeight: 800,
+              borderRadius: 50,
+              padding: "16px 36px",
+              border: "none",
+              cursor: "pointer",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              width: "fit-content",
+              boxShadow: "0 8px 28px rgba(0,90,209,0.25)",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 14px 36px rgba(0,90,209,0.35)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 8px 28px rgba(0,90,209,0.25)";
+            }}
+          >
             Get in touch
-            <span className="text-xl">→</span>
+            <span style={{ fontSize: 20, marginLeft: 8 }}>→</span>
           </button>
 
           <div className="space-y-6">

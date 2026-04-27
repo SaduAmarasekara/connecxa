@@ -95,8 +95,11 @@ export default function NFCEventsPage() {
       <div className="py-20">
         <CorporateCTA />
       </div>
-      
-      <FAQ />
+
+      <div className="py-20">
+
+        <FAQ />
+      </div>
     </div>
   );
 }

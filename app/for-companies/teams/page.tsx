@@ -1,21 +1,20 @@
 "use client";
 
 import TeamHero from "@/components/TeamHero";
-import NutshellFeatures from "@/components/NutshellFeatures";
-import CRMHero from "@/components/CRMHero";
+import TeamFeatureSections from "@/components/TeamFeatureSections";
 import FAQ from "@/components/FAQ";
+
 
 export default function TeamsPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div>
+     
       <TeamHero />
-      <div className="py-20">
-        <NutshellFeatures />
-      </div>
-      <CRMHero />
-      <div className="py-20">
-        <FAQ />
-      </div>
+      <div className="w-full h-24 lg:h-32 bg-white" />
+      <TeamFeatureSections />
+      <div className="w-full h-24 lg:h-32 bg-white" />
+      <FAQ />
+      <div className="w-full h-24 lg:h-32 bg-white" />
     </div>
   );
 }
