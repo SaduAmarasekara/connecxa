@@ -8,6 +8,7 @@ import LivePrintingFeatures from "@/components/LivePrintingFeatures";
 import NFCEventServices from "@/components/NFCEventServices";
 import NFCEventSteps from "@/components/NFCEventSteps";
 
+
 export default function NFCEventsPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -27,8 +28,10 @@ export default function NFCEventsPage() {
       
       <div className="py-20">
         <FAQ />
-      </div>
+        </div>
+      <div className="w-full h-24 lg:h-32 bg-white" />
       
+    
       <div className="w-full h-24 lg:h-32 bg-white" />
     </div>
   );

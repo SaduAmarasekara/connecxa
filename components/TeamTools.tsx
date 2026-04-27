@@ -38,8 +38,8 @@ const tools = [
 
 export default function TeamTools() {
   return (
-    <section className="w-full flex justify-center py-20 bg-white">
-      <div className="w-full max-w-[1300px] px-6 text-center">
+    <section className="w-full flex justify-center py-20 bg-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+      <div className="w-full max-w-[1300px] px-6 text-center" style={{ marginLeft: 40, marginRight: 40 }}>
         <h2 className="text-[36px] md:text-[52px] font-[900] text-[#111827] mb-4">
           Must-have Tools for Teams <span className="inline-block">🛠️</span>
         </h2>
@@ -47,7 +47,7 @@ export default function TeamTools() {
           Modern tools to help administrators stay connected and manage smarter
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 text-left" style={{ marginLeft: 50, marginRight: 50 }}>
           {tools.map((tool, i) => (
             <div key={i} className="flex gap-6 items-start group">
               <div className="w-14 h-14 bg-[#EBF3FF] rounded-xl flex items-center justify-center text-[#005AD1] shrink-0 transition-transform group-hover:scale-110">

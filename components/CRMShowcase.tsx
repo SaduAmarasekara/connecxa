@@ -26,7 +26,7 @@ const crmShowcaseItems = [
     tag: "LEAD GENERATION TOOLS",
     title: "Capture Leads Fast. Convert Faster.",
     desc: "Share your contact and capture inbound interest in seconds. Built for real-world networking - no manual entry, just smarter follow-ups.",
-    list: ["Capture leads instantly with built-in contact tools", "Auto-sync leads directly into your CRM"],
+    list: ["Capture s instantly with built-in contact tools", "Auto-sync leads directly into your CRM"],
     image: "/crm-lead-gen.png",
     imageBg: "#DBEAFE",
     reverse: false
@@ -57,23 +57,21 @@ export default function CRMShowcase() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full py-24 bg-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+    <section ref={sectionRef} className="w-full py-24 bg-white" style={{ fontFamily: "'DM Sans', sans-serif" , marginLeft: 40}}>
       <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col gap-32">
         {crmShowcaseItems.map((item, i) => (
-          <div 
-            key={i} 
+          <div
+            key={i}
             data-index={i}
-            className={`reveal-section flex flex-col lg:flex-row items-center gap-16 lg:gap-24 transition-all duration-1000 ease-out ${
-              item.reverse ? "lg:flex-row-reverse" : ""
-            } ${
-              visibleItems.includes(i) 
-                ? "opacity-100 translate-y-0" 
+            className={`reveal-section flex flex-col lg:flex-row items-center gap-16 lg:gap-24 transition-all duration-1000 ease-out ${item.reverse ? "lg:flex-row-reverse" : ""
+              } ${visibleItems.includes(i)
+                ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-20"
-            }`}
+              }`}
           >
             {/* Visual Side */}
             <div className="flex-1 w-full lg:w-1/2">
-              <div 
+              <div
                 className="relative w-full aspect-[4/3] rounded-[48px] overflow-hidden shadow-sm flex items-center justify-center p-8 md:p-12 group"
                 style={{ background: item.imageBg }}
               >
@@ -99,7 +97,7 @@ export default function CRMShowcase() {
               <p className="text-[19px] text-gray-500 font-medium leading-relaxed mb-10">
                 {item.desc}
               </p>
-              
+
               <ul className="space-y-6">
                 {item.list.map((li, idx) => (
                   <li key={idx} className="flex items-start gap-4">
