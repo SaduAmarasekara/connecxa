@@ -56,7 +56,7 @@ export default function FAQSection() {
         .faq-section {
           background: #FAFAF8;
           padding: 90px 40px;
-          font-family: var(--font-outfit), sans-serif;
+          font-family: 'DM Sans', sans-serif;
         }
 
         .faq-inner {

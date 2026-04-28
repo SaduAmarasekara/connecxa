@@ -80,7 +80,7 @@ export default function HelpCenterPage() {
   ];
 
   return (
-    <div className="help-center-page" style={{ fontFamily: "var(--font-outfit), sans-serif" }}>
+    <div className="help-center-page" style={{ fontFamily: "DM Sans, sans-serif" }}>
       <style>{`
         .help-center-page {
           background: #fff;

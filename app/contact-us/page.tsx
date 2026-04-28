@@ -17,7 +17,7 @@ export default function ContactUsPage() {
           margin: 0 auto;
           padding: 0 40px;
           align-items: stretch;
-          font-family: var(--font-outfit), sans-serif;
+          font-family: DM Sans, sans-serif;
           background: #FAFAF8;
         }
 
@@ -60,7 +60,7 @@ export default function ContactUsPage() {
         }
 
         .contact-heading {
-          font-family: var(--font-outfit), sans-serif;
+          font-family: 'DM Sans', sans-serif;
           font-size: 56px;
           font-weight: 800;
           line-height: 1.04;
@@ -122,7 +122,7 @@ export default function ContactUsPage() {
           padding: 13px 16px;
           border: 1.5px solid #E8E8E4;
           border-radius: 12px;
-          font-family: var(--font-outfit), sans-serif;
+          font-family: 'DM Sans', sans-serif;
           font-size: 14px;
           color: #111;
           background: #fff;
@@ -174,7 +174,7 @@ export default function ContactUsPage() {
           color: #fff;
           border: none;
           border-radius: 14px;
-          font-family: var(--font-outfit), sans-serif;
+          font-family: 'DM Sans', sans-serif;
           font-size: 15px;
           font-weight: 700;
           cursor: pointer;
@@ -280,7 +280,7 @@ export default function ContactUsPage() {
 
         .testimonial-text {
           color: #fff;
-          font-family: var(--font-outfit), sans-serif;
+          font-family: 'DM Sans', sans-serif;
           font-size: 17px;
           font-weight: 400;
           font-style: italic;

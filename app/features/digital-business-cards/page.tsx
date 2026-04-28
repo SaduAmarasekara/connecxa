@@ -11,64 +11,67 @@ import FAQ from '@/components/FAQ';
 
 export default function DigitalBusinessCards() {
   return (
-    <main className="min-h-screen bg-white flex flex-col items-center py-6 md:py-12" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+    <main className="min-h-screen bg-white flex flex-col items-center py-6 md:py-12" style={{ fontFamily: "DM Sans, sans-serif" }}>
       
       {/* Hero Section Container */}
       <div className="w-full max-w-[1600px] px-6">
         {/* ── Hero ── */}
-        <div className="relative flex flex-col lg:flex-row items-stretch bg-[#005AD1] rounded-[48px] min-h-[700px] overflow-hidden border-[8px] border-white">
+        <div className="relative flex flex-col lg:flex-row items-stretch bg-[#D8C4E0] rounded-[48px] min-h-[700px] overflow-hidden">
           
           {/* Left Content */}
-          <div className="relative z-10 flex-1 lg:flex-[0_0_50%] flex flex-col justify-center p-12 md:p-14 lg:pl-[80px] lg:pr-[40px] lg:py-[80px] mt-48 text-white" style={{ margin: "0 60px" }}>
-            <div className="text-[13px] font-bold tracking-[0.12em] text-white/80 uppercase mb-8">
-              NFC BUSINESS CARDS
+          <div className="relative z-10 flex-1 lg:flex-[0_0_55%] flex flex-col justify-center p-12 md:p-14 lg:pl-[80px] lg:pr-[40px] lg:py-[80px]">
+            <div className="text-[14px] font-bold tracking-[0.15em] text-black uppercase mb-6">
+              DIGITAL BUSINESS CARD
             </div>
-            <h1 className="text-[52px] md:text-[68px] lg:text-[84px] font-black text-white leading-[1.02] mb-8">
-              Your Smartest<br />Business Card Yet
+            <h1 className="text-[56px] md:text-[72px] lg:text-[88px] font-black text-black leading-[1.02] mb-8 tracking-[-0.04em]">
+              Ditch the Paper.<br />Go Fully Digital.
             </h1>
-            <p className="text-[20px] text-white/90 leading-[1.6] mb-12 max-w-[520px] font-medium">
-              Modernise your networking with a single tap - share socials, links, and contacts instantly.
+            <p className="text-[21px] text-black/80 leading-[1.6] mb-12 max-w-[560px] font-medium">
+              Make every impression count with a sleek, modern digital business card - no apps, no limits, just your brand at its best.
             </p>
             
             <button 
               style={{
                 background: "#fff",
-                color: "#111827",
+                color: "#000",
                 fontSize: 18,
                 fontWeight: 800,
                 borderRadius: 50,
-                padding: "16px 36px",
+                padding: "18px 42px",
                 border: "none",
                 cursor: "pointer",
                 display: "inline-flex",
                 alignItems: "center",
-                gap: 8,
+                gap: 12,
                 width: "fit-content",
-                boxShadow: "0 8px 28px rgba(0,0,0,0.18)",
-                transition: "all 0.2s",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+                transition: "all 0.25s cubic-bezier(0.23, 1, 0.32, 1)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.boxShadow = "0 14px 36px rgba(0,0,0,0.22)";
+                e.currentTarget.style.transform = "translateY(-3px)";
+                e.currentTarget.style.boxShadow = "0 15px 40px rgba(0,0,0,0.15)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 8px 28px rgba(0,0,0,0.18)";
+                e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
               }}
             >
-              Customise Now
-              <span style={{ fontSize: 20, marginLeft: 8 }}>→</span>
+              Get Started
+              <span style={{ fontSize: 22 }}>→</span>
             </button>
           </div>
 
           {/* Right Mockup */}
-          <div className="relative z-10 flex-1 flex items-center justify-center p-8 lg:p-12">
-            <div className="relative w-full aspect-[4/3] max-w-[650px] rounded-[32px] overflow-hidden group">
+          <div className="relative z-10 flex-1 flex items-center justify-center p-8 lg:p-12 lg:pr-[80px]">
+            <div className="relative w-full aspect-square max-w-[650px] group">
+              {/* Background Circle */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-white/20 rounded-full blur-3xl" />
+              
               <Image
-                src="/digital-card-mockup.png"
+                src="/digital_card_lavender_mockup_1777364739572.png"
                 alt="Digital Business Card Mockup"
                 fill
-                className="object-contain object-center transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_40px_80px_rgba(0,0,0,0.3)]"
+                className="object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_40px_80px_rgba(0,0,0,0.2)]"
                 priority
               />
             </div>

@@ -4,7 +4,7 @@ import React from "react";
 
 export default function FAQsPage() {
   return (
-    <main className="min-h-screen bg-[#FAFAF8] pt-32 pb-20 px-6 flex flex-col items-center justify-center text-center" style={{ fontFamily: "var(--font-outfit), sans-serif" }}>
+    <main className="min-h-screen bg-[#FAFAF8] pt-32 pb-20 px-6 flex flex-col items-center justify-center text-center" style={{ fontFamily: "DM Sans, sans-serif" }}>
       <div className="w-16 h-16 bg-[#005AD1]/10 rounded-2xl flex items-center justify-center mb-8">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#005AD1" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
