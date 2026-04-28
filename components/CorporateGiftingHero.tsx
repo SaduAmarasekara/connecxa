@@ -14,7 +14,7 @@ export default function CorporateGiftingHero() {
           <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-white/40 rounded-full blur-3xl pointer-events-none" />
 
           {/* Left Content */}
-          <div className="relative z-10 flex-1 lg:flex-[0_0_50%] flex flex-col justify-center p-12 md:p-14 lg:pl-[clamp(60px,8vw,120px)] lg:pr-[40px] lg:py-[80px]" style={{ marginLeft: 40 }}>
+          <div className="relative z-10 flex-1 lg:flex-[0_0_50%] flex flex-col justify-center p-12 md:p-14 lg:pl-[clamp(60px,8vw,120px)] lg:pr-[40px] lg:py-[80px]">
             <div className="text-[14px] font-bold tracking-[0.2em] text-[#005AD1] uppercase mb-8">
               CORPORATE GIFTING
             </div>

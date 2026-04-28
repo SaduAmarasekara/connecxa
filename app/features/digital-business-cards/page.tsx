@@ -19,7 +19,7 @@ export default function DigitalBusinessCards() {
         <div className="relative flex flex-col lg:flex-row items-stretch bg-[#D8C4E0] rounded-[48px] min-h-[700px] overflow-hidden">
           
           {/* Left Content */}
-          <div className="relative z-10 flex-1 lg:flex-[0_0_55%] flex flex-col justify-center p-12 md:p-14 lg:pl-[80px] lg:pr-[40px] lg:py-[80px]" style = {{marginLeft:40 }}> 
+          <div className="relative z-10 flex-1 lg:flex-[0_0_55%] flex flex-col justify-center p-12 md:p-14 lg:pl-[80px] lg:pr-[40px] lg:py-[80px]"> 
             <div className="text-[14px] font-bold tracking-[0.15em] text-black uppercase mb-6">
               DIGITAL BUSINESS CARD
             </div>
