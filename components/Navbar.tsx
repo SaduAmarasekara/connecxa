@@ -158,7 +158,48 @@ const navLinks = [
     ]
   },
   { label: "Contact Us", href: "/contact-us", hasDropdown: false },
-  { label: "Resources", hasDropdown: true },
+  { 
+    label: "Resources", 
+    hasDropdown: true,
+    dropdown: [
+      {
+        title: "Help Center",
+        desc: "Guides to help you get started",
+        icon: (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+        ),
+        href: "/resources/help-center"
+      },
+      {
+        title: "FAQs",
+        desc: "Answers to frequently asked questions",
+        icon: (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            <path d="M9 8h.01" />
+            <path d="M12 8h.01" />
+            <path d="M15 8h.01" />
+          </svg>
+        ),
+        href: "/resources/faqs"
+      },
+      {
+        title: "Blogs",
+        desc: "Articles, insights, and success stories",
+        icon: (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
+            <path d="M2 10h20" />
+          </svg>
+        ),
+        href: "/resources/blogs"
+      }
+    ]
+  },
 ];
 
 export default function Navbar() {
