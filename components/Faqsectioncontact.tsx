@@ -56,7 +56,7 @@ export default function FAQSection() {
         .faq-section {
           background: #FAFAF8;
           padding: 90px 40px;
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--font-outfit), sans-serif;
         }
 
         .faq-inner {
@@ -158,7 +158,7 @@ export default function FAQSection() {
           gap: 16px;
           cursor: pointer;
           text-align: left;
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--font-outfit), sans-serif;
           font-size: 16px;
           font-weight: 700;
           color: #0D0D0D;

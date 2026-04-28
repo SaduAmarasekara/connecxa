@@ -105,7 +105,7 @@ export default function TestermonialsContact() {
         .testimonials-section {
           background: #F5F5F3;
           padding: 80px 40px 90px;
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--font-outfit), sans-serif;
           position: relative;
           overflow: hidden;
         }

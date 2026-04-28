@@ -61,12 +61,12 @@ export default function ContactUsPage() {
 
         .contact-heading {
           font-family: var(--font-outfit), sans-serif;
-          font-size: 48px;
-          font-weight: 400;
-          line-height: 1.1;
+          font-size: 56px;
+          font-weight: 800;
+          line-height: 1.04;
           color: #0D0D0D;
-          margin-bottom: 12px;
-          letter-spacing: -0.5px;
+          margin-bottom: 20px;
+          letter-spacing: -0.03em;
         }
 
         .contact-heading em {
@@ -75,11 +75,11 @@ export default function ContactUsPage() {
         }
 
         .contact-subtitle {
-          font-size: 15px;
+          font-size: 19px;
           color: #6B6B6B;
-          line-height: 1.6;
+          line-height: 1.7;
           margin-bottom: 40px;
-          max-width: 420px;
+          max-width: 520px;
           font-weight: 400;
         }
 
