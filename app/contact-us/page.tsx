@@ -3,6 +3,7 @@
 import React from "react";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import TestermonialsContact from "@/components/testermonialscontact";
+import FAQSectionContact from "@/components/Faqsectioncontact";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -753,6 +754,8 @@ export default function ContactUsPage() {
       </div>
       <div className="w-full h-24 lg:h-32 bg-white" />
       <TestermonialsContact />
+      <div className="w-full h-24 lg:h-32 bg-white" />
+      <FAQSectionContact />
       <div className="w-full h-24 lg:h-32 bg-white" />
     </div>
   );

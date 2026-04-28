@@ -30,9 +30,34 @@ export default function DigitalBusinessCards() {
               Modernise your networking with a single tap - share socials, links, and contacts instantly.
             </p>
             
-            <button className="flex items-center gap-[15px] bg-white text-[#111] text-[20px] font-black rounded-[50px] px-10 py-5 shadow-[0_16px_48px_rgba(0,0,0,0.12)] hover:shadow-[0_24px_56px_rgba(0,0,0,0.18)] hover:-translate-y-1 transition-all w-fit cursor-pointer outline-none border-none">
+            <button 
+              style={{
+                background: "#fff",
+                color: "#111827",
+                fontSize: 18,
+                fontWeight: 800,
+                borderRadius: 50,
+                padding: "16px 36px",
+                border: "none",
+                cursor: "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                width: "fit-content",
+                boxShadow: "0 8px 28px rgba(0,0,0,0.18)",
+                transition: "all 0.2s",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-2px)";
+                e.currentTarget.style.boxShadow = "0 14px 36px rgba(0,0,0,0.22)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 8px 28px rgba(0,0,0,0.18)";
+              }}
+            >
               Customise Now
-              <span className="text-[24px] leading-none">→</span>
+              <span style={{ fontSize: 20, marginLeft: 8 }}>→</span>
             </button>
           </div>
 
