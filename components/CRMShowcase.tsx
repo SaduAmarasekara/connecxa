@@ -57,7 +57,7 @@ export default function CRMShowcase() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full py-24 bg-white" style={{ fontFamily: "'DM Sans', sans-serif" , marginLeft: 40}}>
+    <section ref={sectionRef} className="w-full py-24 bg-white" style={{ fontFamily: "'DM Sans', sans-serif", marginLeft: 40 }}>
       <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col gap-32">
         {crmShowcaseItems.map((item, i) => (
           <div
