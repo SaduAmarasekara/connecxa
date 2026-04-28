@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function ContactContextSection() {
   return (
-    <section className="w-full py-24 bg-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+    <section className="w-full py-24 bg-white" style={{ fontFamily: "'DM Sans', sans-serif" ,marginLeft: 40 }}>
       <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
@@ -99,7 +99,7 @@ export function NetworkingFeatures() {
   ];
 
   return (
-    <section className="w-full py-24 bg-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+    <section className="w-full py-24 bg-white" style={{ fontFamily: "'DM Sans', sans-serif", marginLeft: 40 }}>
       <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <h2 className="text-[44px] md:text-[56px] font-black text-[#111] leading-tight mb-4 flex items-center justify-center gap-4">
