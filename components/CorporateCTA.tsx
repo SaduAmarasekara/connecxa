@@ -16,12 +16,37 @@ export default function CorporateCTA() {
             Customise With Your <br />Corporate Branding
           </h2>
 
-          <p className="text-white/90 text-[16px] md:text-[18px] font-medium leading-relaxed mb-10 max-w-[420px]">
+          <p className="text-white/90 text-[16px] md:text-[18px] font-medium leading-relaxed mb-10 max-w-[420px]" style={{ marginBottom: 30 }}>
             Getting in bulk or looking to get corporate-branded connecxa for your company?
           </p>
 
-          <button className="bg-[#FF5C00] hover:bg-[#E65300] text-white px-20 py-10 rounded-2xl font-[900] text-[28px] w-fit transition-all hover:scale-105 active:scale-95 shadow-[0_30px_30px_rgba(255,92,0,0.3)] uppercase tracking-wider">
+          <button
+            style={{
+              background: "#FF5C00",
+              color: "#fff",
+              fontSize: 18,
+              fontWeight: 800,
+              borderRadius: 50,
+              padding: "16px 36px",
+              border: "none",
+              cursor: "pointer",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              width: "fit-content",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 14px 36px rgba(255,92,0,0.35)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 8px 28px rgba(255,92,0,0.25)";
+            }}
+          >
             Get in touch
+            <span style={{ fontSize: 20, marginLeft: 5 }}>→</span>
           </button>
         </div>
       </div>

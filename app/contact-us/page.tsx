@@ -9,6 +9,16 @@ export default function ContactUsPage() {
   return (
     <div>
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap');
+        
+        .contact-page-wrapper {
+          font-family: 'DM Sans', sans-serif !important;
+        }
+
+        .contact-page-wrapper * {
+          font-family: 'DM Sans', sans-serif !important;
+        }
+
         .contact-page {
           min-height: 100vh;
           display: grid;
@@ -17,7 +27,6 @@ export default function ContactUsPage() {
           margin: 0 auto;
           padding: 0 40px;
           align-items: stretch;
-          font-family: DM Sans, sans-serif;
           background: #FAFAF8;
         }
 
@@ -386,7 +395,8 @@ export default function ContactUsPage() {
         }
       `}</style>
 
-      <div className="contact-page">
+      <div className="contact-page-wrapper">
+        <div className="contact-page">
         {/* ── LEFT: Form ── */}
         <div className="contact-left">
           <div className="eyebrow">
@@ -744,6 +754,7 @@ export default function ContactUsPage() {
       <div className="w-full h-24 lg:h-32 bg-white" />
       <FAQSectionContact />
       <div className="w-full h-24 lg:h-32 bg-white" />
+      </div>
     </div>
   );
 }
