@@ -35,14 +35,13 @@ export default function FAQ({ dark = false }: { dark?: boolean }) {
 
   return (
     <section className="w-full flex flex-col items-center bg-white py-24 lg:py-32" style={{ fontFamily: "'DM Sans', 'Helvetica Neue', sans-serif" }}>
-      <div className="w-full max-w-[1600px] px-6 lg:px-12">
+      <div className="w-full max-w-[1200px] px-6 lg:px-12">
         {/* Main Box */}
-        <div 
-          className={`rounded-[24px] md:rounded-[15px] px-10 py-16 md:px-16 md:py-20 lg:px-[80px] lg:py-[90px] text-white flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-20 shadow-2xl transition-colors duration-500 ${
-            dark ? 'bg-[#111111]' : 'bg-[#005AD1]'
-          }`}
+        <div
+          className={`rounded-[24px] md:rounded-[15px] px-5 py-16  lg:px-[10px] lg:py-[120px] text-white flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-20 shadow-2xl transition-colors duration-500 ${dark ? 'bg-[#111111]' : 'bg-[#005AD1]'
+            }`}
         >
-          
+
           {/* Left Column */}
           <div className="w-full lg:w-[35%] flex flex-col shrink-0 text-left">
             <h2 className="text-[clamp(40px,10vw,76px)] font-bold tracking-tight leading-none mb-6">
@@ -52,7 +51,7 @@ export default function FAQ({ dark = false }: { dark?: boolean }) {
               href="#"
               className="text-[17px] font-semibold flex items-center gap-2 hover:translate-x-1 transition-transform w-fit opacity-90 hover:opacity-100"
             >
-              See all FAQs 
+              See all FAQs
               <span className="text-[20px] leading-none -mt-0.5">→</span>
             </a>
           </div>
@@ -74,9 +73,8 @@ export default function FAQ({ dark = false }: { dark?: boolean }) {
                     {faq.question}
                   </span>
                   <div
-                    className={`transform transition-transform duration-300 flex-shrink-0 flex items-center justify-center ${
-                      openIndex === index ? "rotate-90" : ""
-                    }`}
+                    className={`transform transition-transform duration-300 flex-shrink-0 flex items-center justify-center ${openIndex === index ? "rotate-90" : ""
+                      }`}
                   >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="9 18 15 12 9 6" />
@@ -86,11 +84,10 @@ export default function FAQ({ dark = false }: { dark?: boolean }) {
 
                 {/* Animated Dropdown Content */}
                 <div
-                  className={`overflow-hidden transition-all duration-400 ease-in-out ${
-                    openIndex === index
+                  className={`overflow-hidden transition-all duration-400 ease-in-out ${openIndex === index
                       ? "max-h-[300px] pb-10 opacity-100"
                       : "max-h-0 opacity-0"
-                  }`}
+                    }`}
                 >
                   <p className="text-[16px] text-white/80 leading-relaxed font-medium md:max-w-[90%]">
                     {faq.answer}
