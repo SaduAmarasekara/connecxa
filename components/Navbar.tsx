@@ -23,17 +23,6 @@ const navLinks = [
         href: "/shop"
       },
       {
-        title: "Accessories and Bundles",
-        desc: "Practical add-ons for seamless sharing",
-        icon: (
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="2" y="6" width="14" height="16" rx="2" ry="2" transform="rotate(-10 2 6)" />
-            <rect x="8" y="2" width="14" height="16" rx="2" ry="2" />
-          </svg>
-        ),
-        href: "/shop"
-      },
-      {
         title: "All Products",
         desc: "Explore everything Connecxa offers",
         icon: (

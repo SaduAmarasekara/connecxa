@@ -10,7 +10,7 @@ const blogPosts = [
     title: "How Connecxa's CRM Integration Boosts Your Sales Performance",
     date: "April 22, 2026",
     excerpt: "Discover how syncing your digital business card contacts directly with your CRM can streamline your sales pipeline and improve conversion rates.",
-    author: "Sadu Amarasekara",
+    author: "Jems swin",
     image: "/blog/crm-integration.png",
     bgColor: "bg-[#EBF5FF]", // Light Blue
   },
@@ -37,7 +37,7 @@ const blogPosts = [
     title: "NFC Live Printing: Elevating Your Corporate Events Experience",
     date: "March 26, 2026",
     excerpt: "Learn how real-time NFC card printing can transform your exhibitions and corporate events into interactive, tech-forward experiences.",
-    author: "Sadu Amarasekara",
+    author: "hello swin",
     image: "/blog/live-printing.png",
     bgColor: "bg-[#F0FDFA]", // Light Mint
   },
@@ -55,7 +55,7 @@ const blogPosts = [
     title: "Connecxa in 2026: A Year of Digital Innovation in Review",
     date: "December 30, 2025",
     excerpt: "A look back at our journey in 2025 and what's coming next for digital business cards, CRM pipelines, and multi-profile support.",
-    author: "Sadu Amarasekara",
+    author: "russian dhawath",
     image: "/blog/future-networking.png",
     bgColor: "bg-[#EEF2FF]", // Light Indigo
   },
@@ -66,12 +66,12 @@ export default function BlogsPage() {
     <main className="min-h-screen bg-white pt-32 pb-20 font-sans flex flex-col items-center">
       <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center">
         {/* Header */}
-        <h1 className="text-[52px] font-[900] text-[#111] text-center mb-6 tracking-tight font-outfit leading-tight">
+        <h1 className="text-[52px] font-[900] text-[#111] text-center tracking-tight font-outfit leading-tight" style={{ marginBottom: 20 }}>
           Connecxa Blog - Digitalization, Networking, Sustainability
         </h1>
 
         {/* Sub-navigation */}
-        <div className="flex items-center justify-center gap-6 mb-16">
+        <div className="flex items-center justify-center gap-6 mb-16" style={{ marginBottom: 20 }}>
           <Link href="/resources/help-center" className="text-[16px] font-semibold text-gray-500 hover:text-[#005AD1] transition-colors">Help Center</Link>
           <Link href="/resources/blogs" className="text-[16px] font-semibold text-[#111] border-b-2 border-[#111] pb-0.5">Blog</Link>
           <Link href="/resources/case-studies" className="text-[16px] font-semibold text-gray-500 hover:text-[#005AD1] transition-colors">Case Studies</Link>
@@ -84,7 +84,7 @@ export default function BlogsPage() {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16"style={{ marginBottom: 20 }}>
           {blogPosts.map((post) => (
             <Link
               href={`/resources/blogs/${post.id}`}
@@ -113,6 +113,7 @@ export default function BlogsPage() {
               </div>
             </Link>
           ))}
+          <div className="w-full h-5 lg:h-15 bg-white" />
         </div>
       </div>
     </main>
