@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import CardShowcase from "@/components/CardShowcase";
 import Workflow from "@/components/Workflow";
@@ -41,36 +42,37 @@ export default function Home() {
 
                 {/* CTA Row */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 " style={{ marginLeft: 20 }}>
-                  <button
-                    style={{
-                      background: "#FF5C00",
-                      color: "#fff",
-                      fontSize: 18,
-                      fontWeight: 800,
-                      borderRadius: 50,
-                      padding: "16px 36px",
-                      border: "none",
-                      cursor: "pointer",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 8,
-                      width: "fit-content",
+                  <Link href="/shop/products" style={{ textDecoration: 'none' }}>
+                    <button
+                      style={{
+                        background: "#FF5C00",
+                        color: "#fff",
+                        fontSize: 18,
+                        fontWeight: 800,
+                        borderRadius: 50,
+                        padding: "16px 36px",
+                        border: "none",
+                        cursor: "pointer",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 8,
+                        width: "fit-content",
 
-                      transition: "all 0.2s",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "translateY(-2px)";
-                      e.currentTarget.style.boxShadow = "0 14px 36px rgba(255,92,0,0.35)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.boxShadow = "0 8px 28px rgba(255,92,0,0.25)";
-                    }}
-                  >
-                    Customise Now
-                    <span style={{ fontSize: 20, marginLeft: 5 }}>→</span>
-                  </button>
-
+                        transition: "all 0.2s",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "translateY(-2px)";
+                        e.currentTarget.style.boxShadow = "0 14px 36px rgba(255,92,0,0.35)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.boxShadow = "0 8px 28px rgba(255,92,0,0.25)";
+                      }}
+                    >
+                      Customise Now
+                      <span style={{ fontSize: 20, marginLeft: 5 }}>→</span>
+                    </button>
+                  </Link>
                 </div>
               </div>
 

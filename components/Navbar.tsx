@@ -492,10 +492,12 @@ export default function Navbar() {
             <div className="actions">
               <button className="btn-demo">Get a Demo</button>
 
-              <button className="btn-login">
-                Log In
-                <span className="arrow">→</span>
-              </button>
+              <Link href="/login" style={{ textDecoration: 'none' }}>
+                <button className="btn-login">
+                  Log In
+                  <span className="arrow">→</span>
+                </button>
+              </Link>
 
               <div className="nav-divider" />
 
