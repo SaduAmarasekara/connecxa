@@ -13,36 +13,40 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-white overflow-hidden">
 
       {/* ── Hero Section ── */}
-      <main className="w-full flex flex-col items-center py-8 lg:py-12">
+      <main className="w-full flex flex-col items-center py-8 lg:py-16 ml-5 md:ml-8 lg:ml-[30px]">
         <div className="w-full max-w-[1600px] px-5 md:px-16 lg:px-24">
 
           {/* Blue Hero Card */}
-          <div className="bg-[#005AD1] rounded-[32px] md:rounded-[48px] px-6 py-12 md:px-14 md:pt-14 lg:px-20 lg:pt-16 text-white relative overflow-hidden flex flex-col lg:flex-row min-h-[auto] lg:min-h-[660px] items-stretch">
+          <div className="bg-[#005AD1] bg-gradient-to-br from-[#005AD1] to-[#0047AB] rounded-[32px] md:rounded-[48px] px-6 py-12 md:px-14 md:pt-14 lg:px-20 lg:pt-16 text-white relative overflow-hidden flex flex-col lg:flex-row min-h-[auto] lg:min-h-[700px] items-stretch shadow-2xl">
 
-            {/* ── Left Column ── */}
-            <div className="flex-1 z-10 flex flex-col justify-between w-full lg:max-w-[600px] pb-16">
+            {/* Background decorative elements */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-black/10 rounded-full blur-[100px] translate-y-1/4 -translate-x-1/4 pointer-events-none" />
 
-              {/* Headline + Sub + CTA */}
-              <div className="flex flex-col gap-10">
+            {/* ── Left Column — Content ── */}
+            <div className="flex-1 z-10 flex flex-col justify-center w-full lg:max-w-[700px] pb-10 lg:pb-16 text-center lg:text-left items-center lg:items-start lg:pl-12 xl:pl-20" style={{ marginLeft: "10px" }}>
+
+              {/* Headline + Sub + CTA Container - Centered Vertically */}
+              <div className="flex flex-col gap-8 md:gap-10 items-center lg:items-start w-full">
                 {/* Eyebrow tag */}
-                <div className="inline-flex w-fit items-center gap-2 bg-white/15 border border-white/20 rounded-full px-4 py-1.5 text-[12px] font-bold tracking-[0.15em] uppercase text-white/90">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF5C00] animate-pulse" />
-
+                <div className="inline-flex w-fit items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-[12px] font-bold tracking-[0.15em] uppercase text-white/90">
+                  <span className="w-2 h-2 rounded-full bg-[#FF5C00] animate-pulse" />
+                  Smart Networking 2.0
                 </div>
 
-                <div className="space-y-5 px-0 md:px-5" >
-                  <h1 className="text-[32px] md:text-[55px] xl:text-[64px] font-extrabold leading-[1.1] md:leading-[1.04] tracking-[-0.03em] mb-6 md:mb-[25px]">
-                    Modern Networking<br className="hidden md:block" />
-                    <span className="">for Professionals</span>
+                <div className="space-y-6 w-full">
+                  <h1 className="text-[36px] md:text-[56px] xl:text-[72px] font-extrabold leading-[1.05] md:leading-[1.02] tracking-[-0.03em]">
+                    Modern Networking <br className="hidden xl:block" />
+                    <span className="text-white/90">for Professionals</span>
                   </h1>
-                  <p className="text-[16px] md:text-[19px] text-white/80 leading-[1.7] font-normal max-w-[520px] mb-8 md:mb-[35px]">
-                    Connect smarter with the all-in-one digital business card, CRM, and contact manager. Built for Professionals. Powered for Teams.
+                  <p className="text-[17px] md:text-[20px] text-white/80 leading-[1.6] font-medium max-w-[540px] mx-auto lg:mx-0">
+                    Connect smarter with the all-in-one digital business card, CRM, and contact manager. Built for high-performing teams.
                   </p>
                 </div>
 
                 {/* CTA Row */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 px-0 md:px-5">
-                  <Link href="/shop/products" style={{ textDecoration: 'none' }}>
+                <div className="flex flex-col sm:flex-row items-center lg:items-start gap-6 w-full justify-center lg:justify-start mt-6">
+                  <Link href="/shop/products" className="no-underline">
                     <button
                       style={{
                         background: "#FF5C00",
@@ -57,7 +61,7 @@ export default function Home() {
                         alignItems: "center",
                         gap: 8,
                         width: "fit-content",
-
+                        boxShadow: "0 8px 28px rgba(255,92,0,0.25)",
                         transition: "all 0.2s",
                       }}
                       onMouseEnter={(e) => {
@@ -70,47 +74,47 @@ export default function Home() {
                       }}
                     >
                       Customise Now
-                      <span style={{ fontSize: 20, marginLeft: 5 }}>→</span>
+                      <span style={{ fontSize: 20, marginLeft: 8 }}>→</span>
                     </button>
                   </Link>
                 </div>
               </div>
 
-              {/* Stats Row — anchored to bottom */}
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-14 pt-8 border-t border-white/15 w-full text-center lg:text-left">
-                <div className="space-y-1.5">
-                  <div className="text-[40px] md:text-[48px] font-extrabold tracking-tight leading-none">2M+</div>
-                  <div className="text-[11px] font-bold text-white/55 uppercase tracking-[0.14em] leading-snug">
+              {/* Stats Row — anchored to bottom area but still part of the flex container */}
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mt-16 pt-10 border-t border-white/20 w-full" style={{ marginTop: "20px" }}>
+                <div className="flex flex-col gap-2 items-center lg:items-start">
+                  <div className="text-[36px] md:text-[48px] font-black tracking-tight leading-none">2M+</div>
+                  <div className="text-[12px] font-bold text-white/60 uppercase tracking-[0.12em] leading-snug">
                     Taps, scans &<br />shares
                   </div>
                 </div>
-                <div className="space-y-1.5">
-                  <div className="text-[40px] md:text-[48px] font-extrabold tracking-tight leading-none">200K+</div>
-                  <div className="text-[11px] font-bold text-white/55 uppercase tracking-[0.14em] leading-snug">
+                <div className="flex flex-col gap-2 items-center lg:items-start">
+                  <div className="text-[36px] md:text-[48px] font-black tracking-tight leading-none">200K+</div>
+                  <div className="text-[12px] font-bold text-white/60 uppercase tracking-[0.12em] leading-snug">
                     Users &<br />teams globally
                   </div>
                 </div>
-                <div className="hidden lg:flex items-center gap-3">
-                  <div className="w-11 h-11 bg-white/10 rounded-xl border border-white/15 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L15 8L21 9L16.5 14L18 20L12 17L6 20L7.5 14L3 9L9 8L12 2Z" fill="white" fillOpacity="0.9" />
+                <div className="hidden md:flex items-center gap-4 border-l border-white/10 pl-6">
+                  <div className="w-12 h-12 bg-white/10 rounded-2xl border border-white/20 flex items-center justify-center shrink-0 shadow-inner">
+                    <svg className="w-6 h-6 text-[#FFCC00]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                     </svg>
                   </div>
-                  <div className="text-[11px] font-bold leading-snug uppercase tracking-[0.12em] opacity-75">
-                    Cyber-certified<br />Partner
+                  <div className="text-[12px] font-bold leading-tight uppercase tracking-[0.1em] opacity-80 text-left">
+                    Certified<br />Cyber Partner
                   </div>
                 </div>
               </div>
             </div>
 
             {/* ── Right Column — Mockup image ── */}
-            <div className="flex-1 relative w-full z-10 flex items-end justify-center lg:justify-end mt-10 lg:mt-0 lg:ml-12 min-h-[300px] md:min-h-[380px] lg:min-h-0">
-              <div className="relative w-full h-full min-h-[360px] md:min-h-[420px] lg:min-h-[600px] lg:scale-[1.08] lg:translate-x-8 lg:translate-y-2 origin-bottom-right">
+            <div className="flex-1 relative w-full z-10 flex items-end justify-center lg:justify-end mt-12 lg:mt-0 min-h-[360px] md:min-h-[480px] lg:min-h-0">
+              <div className="relative w-full h-full min-h-[400px] md:min-h-[500px] lg:min-h-[640px] lg:scale-[1.15] lg:translate-x-12 lg:translate-y-4 origin-bottom-right transition-transform duration-700 ease-out hover:scale-[1.18]">
                 <Image
                   src="/hero-mockup.png"
                   alt="Connecxa App Mockup"
                   fill
-                  className="object-contain object-bottom lg:object-right-bottom drop-shadow-[0_40px_50px_rgba(0,0,0,0.35)]"
+                  className="object-contain object-bottom lg:object-right-bottom drop-shadow-[0_45px_65px_rgba(0,0,0,0.45)]"
                   priority
                 />
               </div>
@@ -121,8 +125,6 @@ export default function Home() {
 
         </div>
       </main>
-
-
 
       {/* ── Sections ── */}
       <div className="w-full h-24 lg:h-32 bg-white" />
@@ -150,6 +152,7 @@ export default function Home() {
 
       {/* Spacer between FAQ and Footer */}
       <div className="w-full h-24 lg:h-32 bg-white" />
+
     </div>
   );
 }
