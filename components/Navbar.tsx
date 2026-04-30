@@ -443,12 +443,15 @@ export default function Navbar() {
           .desktop-links { display: none; } 
           .nav-divider { display: none; } 
           .hamburger { display: flex; }
+          .logo-wrap { width: 200px; height: 72px; }
         }
-        @media (max-width: 850px) {
+        @media (max-width: 1000px) {
           .btn-demo { display: none; }
         }
-        @media (max-width: 640px) { 
+        @media (max-width: 768px) {
           .btn-login { display: none; }
+        }
+        @media (max-width: 640px) { 
           .nav-inner { padding: 10px 16px; gap: 12px; } 
           .nav-inner.scrolled { padding: 8px 16px; } 
           .logo-wrap { width: 140px; height: 50px; } 
