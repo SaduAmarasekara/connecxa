@@ -194,6 +194,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
   const [cartCount] = useState(2);
 
   useEffect(() => {
@@ -201,6 +202,13 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Reset dropdown when mobile menu closes
+  useEffect(() => {
+    if (!mobileOpen) {
+      setActiveMobileDropdown(null);
+    }
+  }, [mobileOpen]);
 
   return (
     <>
@@ -388,6 +396,7 @@ export default function Navbar() {
           border: 1px solid #e5e7eb;
           background: #f9fafb;
           transition: all 0.2s ease;
+          flex-shrink: 0;
         }
         .hamburger:hover { background: #eff6ff; border-color: #bfdbfe; }
         .ham-line {
@@ -430,9 +439,27 @@ export default function Navbar() {
         }
         .mobile-nav-link:hover { color: #005AD1; }
 
-        @media (max-width: 1100px) { .desktop-links { display: none; } .nav-divider { display: none; } }
-        @media (max-width: 640px) { .btn-demo { display: none; } .nav-inner { padding: 10px 20px; } .nav-inner.scrolled { padding: 8px 20px; } .logo-wrap { width: 180px; height: 64px; } }
-        @media (max-width: 1100px) { .hamburger { display: flex; } }
+        @media (max-width: 1100px) { 
+          .desktop-links { display: none; } 
+          .nav-divider { display: none; } 
+          .hamburger { display: flex; }
+        }
+        @media (max-width: 850px) {
+          .btn-demo { display: none; }
+        }
+        @media (max-width: 640px) { 
+          .btn-login { display: none; }
+          .nav-inner { padding: 10px 16px; gap: 12px; } 
+          .nav-inner.scrolled { padding: 8px 16px; } 
+          .logo-wrap { width: 140px; height: 50px; } 
+          .actions { gap: 8px; }
+          .nav-divider { display: none; }
+        }
+        @media (max-width: 380px) {
+          .logo-wrap { width: 120px; }
+          .cart-btn { width: 38px; height: 38px; }
+          .hamburger { padding: 6px; }
+        }
       `}</style>
 
       <div className="navbar-root">
@@ -546,20 +573,74 @@ export default function Navbar() {
               marginBottom: 40,
             }}
           >
-            {navLinks.map((link) => (
-              link.href && !link.hasDropdown ? (
-                <Link href={link.href} key={link.label} className="mobile-nav-link" onClick={() => setMobileOpen(false)}>
-                  {link.label}
-                </Link>
-              ) : (
-                <div key={link.label} className="mobile-nav-link">
-                  {link.label}
-                  {link.hasDropdown && (
-                    <span style={{ fontSize: 13, opacity: 0.4 }}>▼</span>
-                  )}
+            {!activeMobileDropdown ? (
+              navLinks.map((link) => (
+                link.href && !link.hasDropdown ? (
+                  <Link href={link.href} key={link.label} className="mobile-nav-link" onClick={() => setMobileOpen(false)}>
+                    {link.label}
+                  </Link>
+                ) : (
+                  <div 
+                    key={link.label} 
+                    className="mobile-nav-link" 
+                    onClick={() => setActiveMobileDropdown(link.label)}
+                  >
+                    {link.label}
+                    {link.hasDropdown && (
+                      <span style={{ fontSize: 13, opacity: 0.4 }}>▶</span>
+                    )}
+                  </div>
+                )
+              ))
+            ) : (
+              <>
+                <div 
+                  className="mobile-nav-link" 
+                  style={{ color: '#005AD1', borderBottom: '2px solid #005AD1', marginBottom: 20 }}
+                  onClick={() => setActiveMobileDropdown(null)}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span style={{ fontSize: 18 }}>←</span>
+                    <span style={{ fontWeight: 800 }}>{activeMobileDropdown}</span>
+                  </div>
                 </div>
-              )
-            ))}
+                {navLinks.find(l => l.label === activeMobileDropdown)?.dropdown?.map((item, i) => (
+                  <Link 
+                    href={item.href} 
+                    key={i} 
+                    onClick={() => {
+                      setMobileOpen(false);
+                      setActiveMobileDropdown(null);
+                    }}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 16,
+                      padding: '16px 0',
+                      borderBottom: '1px solid #f3f4f6',
+                      textDecoration: 'none'
+                    }}
+                  >
+                    <div style={{ 
+                      width: 44, 
+                      height: 44, 
+                      backgroundColor: '#005AD1', 
+                      borderRadius: 10, 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center',
+                      flexShrink: 0
+                    }}>
+                      {item.icon}
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                      <span style={{ fontSize: 16, fontWeight: 700, color: '#111827' }}>{item.title}</span>
+                      <span style={{ fontSize: 13, color: '#6b7280', lineHeight: 1.3 }}>{item.desc}</span>
+                    </div>
+                  </Link>
+                ))}
+              </>
+            )}
           </div>
 
           <div
