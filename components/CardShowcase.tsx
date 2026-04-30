@@ -211,17 +211,52 @@ export default function CardShowcase() {
 
   return (
     <section
+      className="py-16 md:py-24"
       style={{
         fontFamily: "'DM Sans', 'Helvetica Neue', sans-serif",
         background: "#ffffff",
-        padding: "96px 0",
+        marginLeft: "20px"
+       
+      
       }}
     >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .card-wrap { transition: none; }
+        
+        .cards-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 48px;
+          padding: 0 20px 64px;
+        }
+
+        .card-wrap { 
+          width: 100%;
+          max-width: 380px;
+          flex-shrink: 0;
+          display: flex;
+          flex-direction: column;
+          transition: none;
+        }
+
+        @media (min-width: 768px) {
+          .cards-container {
+            flex-direction: row;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 24px;
+            padding: 0 0 40px;
+            align-items: stretch;
+          }
+          .card-wrap {
+            width: 380px;
+            scroll-snap-align: start;
+          }
+        }
+
         .gray-box { transition: background 0.3s ease; }
         .gray-box:hover { background: #EBEBEB !important; }
         .biz-card { transition: transform 0.5s cubic-bezier(0.23,1,0.32,1), box-shadow 0.5s ease; }
@@ -238,11 +273,11 @@ export default function CardShowcase() {
         .cards-outer:hover .carousel-arrow { opacity: 1; }
         .carousel-arrow:hover { background: rgba(17,17,17,0.65) !important; }
       `}</style>
+      <div className="max-w-[1600px] mx-auto px-5 md:px-16 lg:px-24">
 
-      <div style={{ maxWidth: 1600, margin: "0 auto", padding: "0 48px" }}>
         {/* ── Header ── */}
         <div
-          style={{ display: "flex", flexDirection: "column", marginBottom: 64 }}
+          style={{ display: "flex", flexDirection: "column", marginBottom: 64, padding: "0 24px" }}
         >
           <h2
             style={{
@@ -252,20 +287,21 @@ export default function CardShowcase() {
               letterSpacing: "-0.02em",
               lineHeight: 1.1,
               margin: "0 0 40px 0",
+              textAlign: "center",
             }}
           >
             Design Your NFC Business Card
           </h2>
 
           {/* Tabs */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
             {tabs.map((tab, i) => (
               <button
                 key={tab}
                 className="tab-pill"
                 onClick={() => setActiveTab(i)}
                 style={{
-                  background: activeTab === i ? "#005AD1" : "#F5F5F5", // original: bg-[#005AD1] active
+                  background: activeTab === i ? "#005AD1" : "#F5F5F5",
                   color: activeTab === i ? "#ffffff" : "#374151",
                   boxShadow:
                     activeTab === i ? "0 8px 24px rgba(0,102,255,0.3)" : "none",
@@ -281,15 +317,7 @@ export default function CardShowcase() {
         <div className="cards-outer" style={{ position: "relative" }}>
           <div
             ref={scrollRef}
-            className="no-scrollbar"
-            style={{
-              display: "flex",
-              gap: 32,
-              overflowX: "auto",
-              paddingBottom: 48,
-              scrollSnapType: "x mandatory",
-              justifyContent: "center",
-            }}
+            className="no-scrollbar cards-container"
           >
             {cards.map((card) => {
               const selColor = activeColors[card.id] ?? 0;
@@ -298,16 +326,7 @@ export default function CardShowcase() {
                 <div
                   key={card.id}
                   className="card-wrap"
-                  style={{
-                    minWidth: 300,
-                    maxWidth: 380,
-                    flexShrink: 0,
-                    scrollSnapAlign: "start",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
                 >
-                  {/* Gray Box — original: bg-[#F2F2F2] rounded-[32px] aspect-square */}
                   <div
                     className="gray-box"
                     style={{
@@ -318,12 +337,11 @@ export default function CardShowcase() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      padding: 40,
+                      padding: "clamp(20px, 10vw, 40px)",
                       marginBottom: 32,
                       boxSizing: "border-box",
                     }}
                   >
-                    {/* Business Card — original: aspect-[1.58/1] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] */}
                     <div
                       className="biz-card"
                       style={{
@@ -338,13 +356,12 @@ export default function CardShowcase() {
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
-                        padding: 24,
+                        padding: "clamp(12px, 5vw, 24px)",
                         boxSizing: "border-box",
                       }}
                     >
                       <div className="shimmer-layer" />
 
-                      {/* Wood grain for Walnut */}
                       {card.woodGrain && (
                         <div
                           style={{
@@ -357,7 +374,6 @@ export default function CardShowcase() {
                         />
                       )}
 
-                      {/* Custom lines for Parallels (if applicable) */}
                       {card.id === "parallels" && (
                         <svg
                           style={{
@@ -376,7 +392,6 @@ export default function CardShowcase() {
                         </svg>
                       )}
 
-                      {/* Custom badge — original: absolute top-4 right-4 text-white italic */}
                       {card.isCustom && (
                         <div
                           style={{
@@ -393,7 +408,6 @@ export default function CardShowcase() {
                         </div>
                       )}
 
-                      {/* Card Text */}
                       <div
                         style={{
                           textAlign: "center",
@@ -404,7 +418,7 @@ export default function CardShowcase() {
                         <div
                           style={{
                             fontWeight: 900,
-                            fontSize: 18,
+                            fontSize: "clamp(14px, 4vw, 18px)",
                             color: currentVariant.textColor,
                             letterSpacing: "0.2em",
                           }}
@@ -413,7 +427,7 @@ export default function CardShowcase() {
                         </div>
                         <div
                           style={{
-                            fontSize: 9,
+                            fontSize: "clamp(7px, 2vw, 9px)",
                             fontWeight: 700,
                             color: currentVariant.subColor,
                             letterSpacing: "0.3em",
@@ -428,7 +442,6 @@ export default function CardShowcase() {
                     </div>
                   </div>
 
-                  {/* Color Circles — original: flex items-center justify-center gap-3 mb-6 */}
                   <div
                     style={{
                       display: "flex",
@@ -464,7 +477,6 @@ export default function CardShowcase() {
                     ))}
                   </div>
 
-                  {/* Name & Price — original: text-center space-y-1 mb-6 */}
                   <div style={{ textAlign: "center", marginBottom: 24 }}>
                     <h3
                       style={{
@@ -488,7 +500,6 @@ export default function CardShowcase() {
                     </p>
                   </div>
 
-                  {/* Specs — original: pt-6 border-t border-gray-100 flex flex-col items-center gap-3 */}
                   <div
                     style={{
                       paddingTop: 24,
@@ -546,10 +557,7 @@ export default function CardShowcase() {
           </div>
         </div>
 
-        {/* View All — original: mt-12 flex justify-end */}
-        <div
-          style={{ marginTop: 48, display: "flex", justifyContent: "flex-end" }}
-        >
+        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
           <Link href="/shop/products" style={{ textDecoration: "none" }}>
             <button
               className="view-all-btn"

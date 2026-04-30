@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { 
-    label: "Shop", 
+  {
+    label: "Shop",
     hasDropdown: true,
     dropdown: [
       {
@@ -36,8 +36,8 @@ const navLinks = [
       }
     ]
   },
-  { 
-    label: "Features", 
+  {
+    label: "Features",
     hasDropdown: true,
     dropdown: [
       {
@@ -101,8 +101,8 @@ const navLinks = [
       }
     ]
   },
-  { 
-    label: "For Companies", 
+  {
+    label: "For Companies",
     hasDropdown: true,
     dropdown: [
       {
@@ -147,8 +147,8 @@ const navLinks = [
     ]
   },
   { label: "Contact Us", href: "/contact-us", hasDropdown: false },
-  { 
-    label: "Resources", 
+  {
+    label: "Resources",
     hasDropdown: true,
     dropdown: [
       {
@@ -241,14 +241,23 @@ export default function Navbar() {
         .nav-inner {
           max-width: 1600px;
           margin: 0 auto;
-          padding: 16px 40px;
+          padding: 16px 20px;
           display: flex;
           align-items: center;
           justify-content: space-between;
           gap: 24px;
           transition: padding 0.3s ease;
         }
-        .nav-inner.scrolled { padding: 10px 40px; }
+        .nav-inner.scrolled { padding: 10px 20px; }
+
+        @media (min-width: 768px) {
+          .nav-inner { padding: 16px 64px; }
+          .nav-inner.scrolled { padding: 10px 64px; }
+        }
+        @media (min-width: 1024px) {
+          .nav-inner { padding: 16px 96px; }
+          .nav-inner.scrolled { padding: 10px 96px; }
+        }
 
         /* Logo */
         .logo-wrap {
@@ -583,9 +592,9 @@ export default function Navbar() {
                     {link.label}
                   </Link>
                 ) : (
-                  <div 
-                    key={link.label} 
-                    className="mobile-nav-link" 
+                  <div
+                    key={link.label}
+                    className="mobile-nav-link"
                     onClick={() => setActiveMobileDropdown(link.label)}
                   >
                     {link.label}
@@ -597,8 +606,8 @@ export default function Navbar() {
               ))
             ) : (
               <>
-                <div 
-                  className="mobile-nav-link" 
+                <div
+                  className="mobile-nav-link"
                   style={{ color: '#005AD1', borderBottom: '2px solid #005AD1', marginBottom: 20 }}
                   onClick={() => setActiveMobileDropdown(null)}
                 >
@@ -608,9 +617,9 @@ export default function Navbar() {
                   </div>
                 </div>
                 {navLinks.find(l => l.label === activeMobileDropdown)?.dropdown?.map((item, i) => (
-                  <Link 
-                    href={item.href} 
-                    key={i} 
+                  <Link
+                    href={item.href}
+                    key={i}
                     onClick={() => {
                       setMobileOpen(false);
                       setActiveMobileDropdown(null);
@@ -624,13 +633,13 @@ export default function Navbar() {
                       textDecoration: 'none'
                     }}
                   >
-                    <div style={{ 
-                      width: 44, 
-                      height: 44, 
-                      backgroundColor: '#005AD1', 
-                      borderRadius: 10, 
-                      display: 'flex', 
-                      alignItems: 'center', 
+                    <div style={{
+                      width: 44,
+                      height: 44,
+                      backgroundColor: '#005AD1',
+                      borderRadius: 10,
+                      display: 'flex',
+                      alignItems: 'center',
                       justifyContent: 'center',
                       flexShrink: 0
                     }}>

@@ -3,8 +3,8 @@
 
 export default function NetworkingToolkit() {
   return (
-    <section className="w-full py-24 bg-white overflow-hidden" style={{ fontFamily: "'DM Sans', 'Helvetica Neue', sans-serif", textAlign: "center", margin: "0 100px" }}>
-      <div className="w-full max-w-[1600px] mx-auto px-6 lg:px-12">
+    <section className="w-full py-16 md:py-24 bg-white overflow-hidden" style={{ fontFamily: "'DM Sans', 'Helvetica Neue', sans-serif", textAlign: "center", marginLeft: "20px" }}>
+      <div className="w-full max-w-[1600px] mx-auto px-5 md:px-16 lg:px-24">
 
         {/* ── Header ── */}
         <div className="text-center mb-20 flex flex-col items-center">
@@ -18,7 +18,7 @@ export default function NetworkingToolkit() {
         </div>
 
         {/* ── Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 md:gap-y-16 mb-20 md:mb-32">
 
           {/* Card 1: Multi-Profile Display */}
           <div className="flex flex-col group">
@@ -218,7 +218,7 @@ export default function NetworkingToolkit() {
         </div>
 
         {/* ── OGC FOR TEAMS Section ── */}
-        <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-24 py-12 lg:pt-16 lg:pb-0">
+        <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 py-12 lg:pt-16 lg:pb-0">
 
           {/* Left: Text Content */}
           <div className="flex-1 w-full max-w-[500px]">

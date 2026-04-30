@@ -14,10 +14,10 @@ export default function Home() {
 
       {/* ── Hero Section ── */}
       <main className="w-full flex flex-col items-center py-8 lg:py-12">
-        <div className="w-full max-w-[1600px] px-4 lg:px-8">
+        <div className="w-full max-w-[1600px] px-5 md:px-16 lg:px-24">
 
           {/* Blue Hero Card */}
-          <div className="bg-[#005AD1] rounded-[48px] px-10 pt-12 pb-0 md:px-14 md:pt-14 lg:px-20 lg:pt-16 text-white relative overflow-hidden flex flex-col lg:flex-row min-h-[660px] items-stretch">
+          <div className="bg-[#005AD1] rounded-[32px] md:rounded-[48px] px-6 py-12 md:px-14 md:pt-14 lg:px-20 lg:pt-16 text-white relative overflow-hidden flex flex-col lg:flex-row min-h-[auto] lg:min-h-[660px] items-stretch">
 
             {/* ── Left Column ── */}
             <div className="flex-1 z-10 flex flex-col justify-between w-full lg:max-w-[600px] pb-16">
@@ -30,18 +30,18 @@ export default function Home() {
 
                 </div>
 
-                <div className="space-y-5" >
-                  <h1 className="text-[36px] md:text-[55px] xl:text-[64px] font-extrabold leading-[1.04] tracking-[-0.03em] " style={{ marginLeft: 20, marginBottom: 25 }}>
-                    Modern Networking<br />
+                <div className="space-y-5 px-0 md:px-5" >
+                  <h1 className="text-[32px] md:text-[55px] xl:text-[64px] font-extrabold leading-[1.1] md:leading-[1.04] tracking-[-0.03em] mb-6 md:mb-[25px]">
+                    Modern Networking<br className="hidden md:block" />
                     <span className="">for Professionals</span>
                   </h1>
-                  <p className="text-[16px] md:text-[19px] text-white/80 leading-[1.7] font-normal max-w-[520px] " style={{ marginLeft: 20, marginBottom: 35 }}>
+                  <p className="text-[16px] md:text-[19px] text-white/80 leading-[1.7] font-normal max-w-[520px] mb-8 md:mb-[35px]">
                     Connect smarter with the all-in-one digital business card, CRM, and contact manager. Built for Professionals. Powered for Teams.
                   </p>
                 </div>
 
                 {/* CTA Row */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 " style={{ marginLeft: 20 }}>
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 px-0 md:px-5">
                   <Link href="/shop/products" style={{ textDecoration: 'none' }}>
                     <button
                       style={{
@@ -77,7 +77,7 @@ export default function Home() {
               </div>
 
               {/* Stats Row — anchored to bottom */}
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-14 pt-8 border-t border-white/15" style={{ margin: "0 auto", textAlign: "center" }}>
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-14 pt-8 border-t border-white/15 w-full text-center lg:text-left">
                 <div className="space-y-1.5">
                   <div className="text-[40px] md:text-[48px] font-extrabold tracking-tight leading-none">2M+</div>
                   <div className="text-[11px] font-bold text-white/55 uppercase tracking-[0.14em] leading-snug">
@@ -104,8 +104,8 @@ export default function Home() {
             </div>
 
             {/* ── Right Column — Mockup image ── */}
-            <div className="flex-1 relative w-full z-10 flex items-end justify-center lg:justify-end mt-10 lg:mt-0 lg:ml-12 min-h-[380px] lg:min-h-0">
-              <div className="relative w-full h-full min-h-[420px] lg:min-h-[600px] lg:scale-[1.08] lg:translate-x-8 lg:translate-y-2 origin-bottom-right">
+            <div className="flex-1 relative w-full z-10 flex items-end justify-center lg:justify-end mt-10 lg:mt-0 lg:ml-12 min-h-[300px] md:min-h-[380px] lg:min-h-0">
+              <div className="relative w-full h-full min-h-[360px] md:min-h-[420px] lg:min-h-[600px] lg:scale-[1.08] lg:translate-x-8 lg:translate-y-2 origin-bottom-right">
                 <Image
                   src="/hero-mockup.png"
                   alt="Connecxa App Mockup"
@@ -125,15 +125,16 @@ export default function Home() {
 
 
       {/* ── Sections ── */}
+      <div className="w-full h-24 lg:h-32 bg-white" />
       <CardShowcase />
 
       {/* Spacer between CardShowcase and Workflow */}
-
+      <div className="w-full h-24 lg:h-32 bg-white" />
 
       <Workflow />
 
       {/* Spacer between Workflow and ProfilesShowcase */}
-      <div className="w-full h-24 lg:h-32 bg-[#F4F4F4]" />
+      <div className="w-full h-24 lg:h-32 bg-white" />
 
       <ProfilesShowcase />
 

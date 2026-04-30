@@ -35,16 +35,16 @@ export default function FAQ({ dark = false }: { dark?: boolean }) {
 
   return (
     <section className="w-full flex flex-col items-center bg-white py-24 lg:py-32" style={{ fontFamily: "'DM Sans', 'Helvetica Neue', sans-serif" }}>
-      <div className="w-full max-w-[1200px] px-6 lg:px-12">
+      <div className="w-full max-w-[1200px] px-5 md:px-16 lg:px-24">
         {/* Main Box */}
         <div
-          className={`rounded-[24px] md:rounded-[15px] px-5 py-16  lg:px-[10px] lg:py-[120px] text-white flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-20 shadow-2xl transition-colors duration-500 ${dark ? 'bg-[#111111]' : 'bg-[#005AD1]'
+          className={`rounded-[32px] md:rounded-[40px] px-6 py-12 md:px-12 md:py-20 lg:px-[80px] lg:py-[100px] text-white flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-20 shadow-2xl transition-colors duration-500 ${dark ? 'bg-[#111111]' : 'bg-[#005AD1]'
             }`}
         >
 
           {/* Left Column */}
           <div className="w-full lg:w-[35%] flex flex-col shrink-0 text-left">
-            <h2 className="text-[clamp(40px,10vw,76px)] font-bold tracking-tight leading-none mb-6">
+            <h2 className="text-[44px] md:text-[60px] lg:text-[76px] font-bold tracking-tight leading-none mb-6">
               FAQs
             </h2>
             <a
@@ -64,12 +64,12 @@ export default function FAQ({ dark = false }: { dark?: boolean }) {
                 className="border-b border-white/25 last:border-b-0 w-full"
               >
                 <button
-                  className="w-full py-7 md:py-8 flex items-center justify-between text-left focus:outline-none group"
+                  className="w-full py-6 md:py-8 flex items-center justify-between text-left focus:outline-none group"
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
                 >
-                  <span className="text-[17px] md:text-[20px] font-medium leading-snug pr-6 group-hover:opacity-90 transition-opacity tracking-tight">
+                  <span className="text-[16px] md:text-[20px] font-medium leading-snug pr-6 group-hover:opacity-90 transition-opacity tracking-tight">
                     {faq.question}
                   </span>
                   <div

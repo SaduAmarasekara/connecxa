@@ -35,10 +35,12 @@ const features = [
 export default function Workflow() {
   return (
     <section
+      className="py-16 md:py-24 lg:py-[100px]"
       style={{
         background: "#F4F4F4",
-        padding: "100px 0 112px",
         fontFamily: "'DM Sans', 'Helvetica Neue', sans-serif",
+        marginLeft: "50px",
+         marginRight: "50px",
       }}
     >
       <style>{`
@@ -91,7 +93,7 @@ export default function Workflow() {
         }
       `}</style>
 
-      <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 48px" }}>
+      <div className="max-w-[1440px] mx-auto px-5 md:px-16 lg:px-24">
 
         {/* ── Header ── */}
         <div style={{ textAlign: "center", marginBottom: 64 }}>
@@ -128,11 +130,7 @@ export default function Workflow() {
 
         {/* ── Feature Cards Grid ── */}
         <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 28,
-          }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7"
         >
           {features.map((feature) => (
             <div key={feature.id} className="wf-card">
