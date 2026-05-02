@@ -18,9 +18,10 @@ export default function ShopPage() {
           <div
             className="relative flex flex-col lg:flex-row items-center lg:items-stretch overflow-hidden bg-[#005AD1] text-white rounded-[32px] md:rounded-[48px] shadow-[0_20px_60px_rgba(28,89,150,0.3)] w-full"
             style={{
-              minHeight: 660,
+              minHeight: "auto",
               paddingTop: "clamp(40px,5vw,80px)",
               paddingLeft: "clamp(20px,5vw,80px)",
+              paddingRight: "clamp(20px,5vw,80px)",
             }}
           >
             {/* Background effects */}
@@ -63,7 +64,7 @@ export default function ShopPage() {
             />
 
             {/* ── Left Column ── */}
-            <div className="z-10 flex flex-col justify-center w-full lg:w-[clamp(320px,42%,580px)] shrink-0 pb-12 lg:pb-20 pr-4 lg:pr-0">
+            <div className="z-10 flex flex-col justify-center items-center lg:items-start text-center lg:text-left w-full lg:w-[clamp(320px,42%,580px)] shrink-0 pb-12 lg:pb-20 lg:pr-0">
               <div
                 style={{
                   fontSize: 13,
@@ -87,7 +88,7 @@ export default function ShopPage() {
                 }}
               >
                 Your Smartest
-                <br />
+                <br className="hidden lg:block" />
                 Business Card Yet
               </h1>
 
@@ -138,7 +139,7 @@ export default function ShopPage() {
             </div>
 
             {/* ── Right Column ── */}
-            <div className="flex-1 relative flex items-end justify-center z-10 w-full min-h-[450px] lg:min-h-[580px] mt-10 lg:mt-0 lg:pr-0 pb-10 lg:pb-0 scale-[0.85] sm:scale-100 origin-bottom">
+            <div className="flex-1 relative flex items-end justify-center z-10 w-full min-h-[420px] sm:min-h-[500px] lg:min-h-[580px] mt-10 lg:mt-0 lg:pr-0 pb-10 lg:pb-0 scale-[0.8] sm:scale-100 origin-bottom">
               {/* ── Phone Shell ── */}
               <div
                 style={{
@@ -642,7 +643,7 @@ export default function ShopPage() {
 
               {/* ── Floating Orange NFC Card ── */}
               <div
-                className="absolute right-0 lg:right-[clamp(30px,6%,80px)] bottom-[50px] lg:bottom-[70px] w-[200px] sm:w-[248px] h-[130px] sm:h-[158px] rounded-[20px] shadow-[0_24px_60px_rgba(0,0,0,0.55)] p-4 z-30 flex flex-col justify-between cursor-pointer transition-transform duration-300 hover:-translate-y-1.5 hover:scale-105"
+                className="absolute right-4 lg:right-[clamp(30px,6%,80px)] bottom-[50px] lg:bottom-[70px] w-[200px] sm:w-[248px] h-[130px] sm:h-[158px] rounded-[20px] shadow-[0_24px_60px_rgba(0,0,0,0.55)] p-4 z-30 flex flex-col justify-between cursor-pointer transition-transform duration-300 hover:-translate-y-1.5 hover:scale-105"
                 style={{
                   background: "linear-gradient(145deg,#e8632a 0%,#c84e18 100%)",
                 }}
