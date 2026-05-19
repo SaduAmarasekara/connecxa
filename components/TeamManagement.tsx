@@ -151,34 +151,33 @@ export default function FeatureGrid() {
           </p>
 
           {/* Single CTA button */}
-          <Link href="/login" style={{ textDecoration: "none", display: "inline-block" }}>
-            <button
-              style={{
-                background: "linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%)",
-                color: "#fff",
-                fontSize: "clamp(14px, 1.3vw, 17px)",
-                fontWeight: 700,
-                borderRadius: "999px",
-                padding: "clamp(12px, 1.1vw, 15px) clamp(28px, 2.5vw, 44px)",
-                border: "none",
-                cursor: "pointer",
-                boxShadow: "0 8px 28px rgba(37,99,235,0.3), inset 0 1px 0 rgba(255,255,255,0.15)",
-                transition: "all 0.25s cubic-bezier(0.34,1.56,0.64,1)",
-                display: "inline-flex", alignItems: "center", gap: "8px",
-                letterSpacing: "-0.01em",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
-                e.currentTarget.style.boxShadow = "0 16px 40px rgba(37,99,235,0.4)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0) scale(1)";
-                e.currentTarget.style.boxShadow = "0 8px 28px rgba(37,99,235,0.3)";
-              }}
-            >
-              Start free trial <span style={{ fontSize: "18px" }}>→</span>
-            </button>
-          </Link>
+          <button
+            onClick={() => window.open(`${process.env.NEXT_PUBLIC_APP_URL}/login`, "_blank")}
+            style={{
+              background: "linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%)",
+              color: "#fff",
+              fontSize: "clamp(14px, 1.3vw, 17px)",
+              fontWeight: 700,
+              borderRadius: "999px",
+              padding: "clamp(12px, 1.1vw, 15px) clamp(28px, 2.5vw, 44px)",
+              border: "none",
+              cursor: "pointer",
+              boxShadow: "0 8px 28px rgba(37,99,235,0.3), inset 0 1px 0 rgba(255,255,255,0.15)",
+              transition: "all 0.25s cubic-bezier(0.34,1.56,0.64,1)",
+              display: "inline-flex", alignItems: "center", gap: "8px",
+              letterSpacing: "-0.01em",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
+              e.currentTarget.style.boxShadow = "0 16px 40px rgba(37,99,235,0.4)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0) scale(1)";
+              e.currentTarget.style.boxShadow = "0 8px 28px rgba(37,99,235,0.3)";
+            }}
+          >
+            Start free trial <span style={{ fontSize: "18px" }}>→</span>
+          </button>
         </div>
 
         {/* ── Feature Grid / Slider (Larger Cards & Images) ── */}

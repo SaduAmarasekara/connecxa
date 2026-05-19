@@ -67,8 +67,8 @@ export default function CRMHero() {
 
               {/* CTA Button */}
               <div className="mt-6">
-                <Link href="/login" className="no-underline">
-                  <button
+                <button
+                    onClick={() => window.open(`${process.env.NEXT_PUBLIC_APP_URL}/login`, "_blank")}
                     style={{
                       background: "#005AD1",
                       color: "#fff",
@@ -100,7 +100,6 @@ export default function CRMHero() {
                   >
                     Get Started <span style={{ fontSize: 20 }}>→</span>
                   </button>
-                </Link>
               </div>
             </div>
           </div>

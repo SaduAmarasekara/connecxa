@@ -244,9 +244,12 @@ const CorporateBranding = () => {
             </p>
 
             <div className="corp-buttons">
-              <Link href="/login" className="corp-btn-primary">
+              <button 
+                onClick={() => window.open(`${process.env.NEXT_PUBLIC_APP_URL}/login`, "_blank")}
+                className="corp-btn-primary"
+              >
                 Get started
-              </Link>
+              </button>
               <Link href="/for-companies/teams" className="corp-btn-secondary">
                 For teams
               </Link>

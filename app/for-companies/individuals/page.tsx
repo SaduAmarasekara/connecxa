@@ -1,15 +1,11 @@
 "use client";
 
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import CRMHero from "@/components/CRMHero";
-import CRMShowcase from "@/components/CRMShowcase";
-import SecuritySection from "@/components/SecuritySection";
+import Link from "next/link";
+import Image from "next/image";
 import FAQ from "@/components/FAQ";
-import FeatureGrid from '@/components/FeatureGrid';
+import HowToCreateCard from "@/components/HowToCreateCard";
 
-export default function CRMDealManager() {
+export default function IndividualsPage() {
   return (
     <main
       className="w-full relative flex flex-col items-center overflow-hidden"
@@ -37,13 +33,13 @@ export default function CRMDealManager() {
           right: "-10%",
           width: "50%",
           height: "55%",
-          background: "radial-gradient(circle, rgba(0,90,209,0.07) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(14,165,233,0.07) 0%, transparent 70%)",
           filter: "blur(80px)",
         }}
       />
 
       {/* ── Hero Section ── */}
-      <section className="w-full max-w-[1280px] px-6 sm:px-10 lg:px-16 z-10 relative" style={{ paddingTop: "35px", paddingBottom: "30px" }}>
+      <section className="w-full max-w-[1280px] px-6 sm:px-10 lg:px-16 z-10 relative" style={{ paddingTop: "40px", paddingBottom: "20px" }}>
         <div
           className="flex flex-col lg:flex-row items-center justify-between"
           style={{ gap: "48px", alignItems: "center" }}
@@ -86,7 +82,7 @@ export default function CRMDealManager() {
                   color: "#005AD1",
                 }}
               >
-                CRM Deal Management
+                FOR INDIVIDUALS
               </span>
             </div>
 
@@ -101,9 +97,15 @@ export default function CRMDealManager() {
                 marginBottom: "28px",
               }}
             >
-              Modern Sales Tools.
+              Your Smartest
               <br />
-              <span style={{ color: "#0f0a1e" }}>Always Ready.</span>
+              <span
+                style={{
+                  color: "#005AD1",
+                }}
+              >
+                Business Card Yet.
+              </span>
             </h1>
 
             {/* Subtext */}
@@ -117,83 +119,47 @@ export default function CRMDealManager() {
                 marginBottom: "48px",
               }}
             >
-              Designed for sales on the move — manage deals and pipelines anywhere, with seamless sync across mobile and desktop.
+              Modernise your networking with a single tap. Share your socials, links, and contact details instantly and leave a lasting impression.
             </p>
 
             {/* CTA Group */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 w-full sm:w-auto">
-              <button
-                onClick={() => window.open(`${process.env.NEXT_PUBLIC_APP_URL}/login`, "_blank")}
-                style={{
-                  background: "linear-gradient(135deg, #005AD1 0%, #004bb1 100%)",
-                  color: "#fff",
-                  fontSize: "17px",
-                  fontWeight: 700,
-                  borderRadius: "999px",
-                  padding: "16px 40px",
-                  border: "none",
-                  cursor: "pointer",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "10px",
-                  width: "100%",
-                  boxShadow: "0 8px 32px rgba(0,90,209,0.3), inset 0 1px 0 rgba(255,255,255,0.15)",
-                  transition: "all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)",
-                  letterSpacing: "-0.01em",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
-                  e.currentTarget.style.boxShadow = "0 16px 40px rgba(0,90,209,0.4), inset 0 1px 0 rgba(255,255,255,0.15)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "translateY(0) scale(1)";
-                  e.currentTarget.style.boxShadow = "0 8px 32px rgba(0,90,209,0.3), inset 0 1px 0 rgba(255,255,255,0.15)";
-                }}
-              >
-                Get Started
-                <span style={{ fontSize: "20px", lineHeight: 1 }}>→</span>
-              </button>
-
-              <Link href="#how-it-works" className="no-underline w-full sm:w-auto">
+              <Link href="/shop" className="no-underline w-full sm:w-auto">
                 <button
+                  className="hero-cta-btn"
                   style={{
-                    background: "rgba(255,255,255,0.7)",
-                    color: "#005AD1",
+                    background: "linear-gradient(135deg, #005AD1 0%, #004bb1 100%)",
+                    color: "#fff",
                     fontSize: "17px",
                     fontWeight: 700,
                     borderRadius: "999px",
                     padding: "16px 40px",
-                    border: "1.5px solid rgba(0,90,209,0.2)",
+                    border: "none",
                     cursor: "pointer",
                     display: "inline-flex",
                     alignItems: "center",
                     justifyContent: "center",
                     gap: "10px",
                     width: "100%",
-                    boxShadow: "0 8px 32px rgba(0,90,209,0.05)",
-                    backdropFilter: "blur(8px)",
+                    boxShadow: "0 8px 32px rgba(0,90,209,0.3), inset 0 1px 0 rgba(255,255,255,0.15)",
                     transition: "all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)",
                     letterSpacing: "-0.01em",
-                    whiteSpace: "nowrap",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
-                    e.currentTarget.style.background = "rgba(0,90,209,0.06)";
-                    e.currentTarget.style.borderColor = "rgba(0,90,209,0.4)";
-                    e.currentTarget.style.boxShadow = "0 16px 40px rgba(0,90,209,0.1)";
+                    e.currentTarget.style.boxShadow = "0 16px 40px rgba(0,90,209,0.4), inset 0 1px 0 rgba(255,255,255,0.15)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = "translateY(0) scale(1)";
-                    e.currentTarget.style.background = "rgba(255,255,255,0.7)";
-                    e.currentTarget.style.borderColor = "rgba(0,90,209,0.2)";
-                    e.currentTarget.style.boxShadow = "0 8px 32px rgba(0,90,209,0.05)";
+                    e.currentTarget.style.boxShadow = "0 8px 32px rgba(0,90,209,0.3), inset 0 1px 0 rgba(255,255,255,0.15)";
                   }}
                 >
-                  See how it works
+                  Shop Now
+                  <span style={{ fontSize: "20px", lineHeight: 1 }}>→</span>
                 </button>
               </Link>
             </div>
+
           </div>
 
           {/* ── Right Column: Image ── */}
@@ -201,21 +167,22 @@ export default function CRMDealManager() {
             className="flex-1 w-full flex justify-center lg:justify-end"
             style={{ maxWidth: "520px" }}
           >
+            {/* Outer floating container */}
             <div
               style={{
                 position: "relative",
                 width: "100%",
                 maxWidth: "460px",
-                paddingTop: "40px",
+                paddingTop: "clamp(0px, 3vw, 60px)",
               }}
             >
-              {/* Glow ring behind card */}
+              {/* Glow ring behind mockup */}
               <div
                 style={{
                   position: "absolute",
                   inset: "-20px",
                   borderRadius: "60px",
-                  background: "radial-gradient(ellipse at center, rgba(0,90,209,0.15) 0%, transparent 70%)",
+                  background: "radial-gradient(ellipse at center, rgba(0,90,209,0.12) 0%, transparent 70%)",
                   filter: "blur(30px)",
                   pointerEvents: "none",
                 }}
@@ -227,20 +194,29 @@ export default function CRMDealManager() {
                   position: "relative",
                   width: "100%",
                   aspectRatio: "4/3",
-                  borderRadius: "48px",
                   overflow: "hidden",
-                  boxShadow: "0 40px 80px -20px rgba(0,90,209,0.25), 0 20px 40px -10px rgba(0,0,0,0.12)",
-                  animation: "heroFloat 7s ease-in-out infinite",
+                  boxShadow: "0 40px 80px -20px rgba(0,90,209,0.25), 0 20px 40px -10px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.4)",
                   border: "1px solid rgba(255,255,255,0.5)",
                   zIndex: 5,
+                  borderRadius: "32px",
                 }}
               >
                 <Image
-                  src="/images/crm-integrations-connecxa.png"
-                  alt="CRM Sales Pipeline Mockup"
+                  src="/shop-hero-composite.png"
+                  alt="NFC Business Card Mockup"
                   fill
                   className="object-cover"
+                  style={{ objectPosition: "center" }}
                   priority
+                />
+                {/* Subtle sheen overlay */}
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(0,90,209,0.03) 100%)",
+                    pointerEvents: "none",
+                  }}
                 />
               </div>
             </div>
@@ -248,30 +224,19 @@ export default function CRMDealManager() {
         </div>
       </section>
 
+      {/* ── Keyframe Animations ── */}
       <style jsx global>{`
         @keyframes pulse {
           0%, 100% { opacity: 1; box-shadow: 0 0 0 3px rgba(0,90,209,0.2); }
           50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(0,90,209,0.08); }
         }
-        @keyframes heroFloat {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.03); }
-        }
       `}</style>
 
-      <div className="w-full">
-        <div className="w-full h-16 lg:h-24 bg-white" />
-        
-        {/* Features Showcase Section */}
-        <CRMShowcase />
-        
-        <div className="w-full h-16 lg:h-24 bg-white" />
-        
-        <SecuritySection />
-        <div className="w-full h-16 lg:h-24 bg-white" />
+      {/* ── Main Content Sections ── */}
+      <div className="w-full mt-16 lg:mt-24">
+         <div className="w-full h-16 lg:h-24 bg-white" />
+        <HowToCreateCard />
         <FAQ />
-        <div className="w-full h-16 lg:h-24 bg-white" />
-        <FeatureGrid />
         <div className="w-full h-16 lg:h-24 bg-white" />
       </div>
     </main>

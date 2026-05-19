@@ -419,10 +419,22 @@ export default function Footer() {
               </h3>
               <div style={{ display: "flex", flexDirection: "column", gap: 13 }}>
                 {quickLinks.map((l) => (
-                  <Link key={l.label} href={l.href} className="footer-link">
-                    {l.label}
-                    <span className="link-arrow">→</span>
-                  </Link>
+                  l.href === "/login" ? (
+                    <button 
+                      key={l.label} 
+                      onClick={() => window.open(`${process.env.NEXT_PUBLIC_APP_URL}/login`, "_blank")}
+                      className="footer-link"
+                      style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'inherit' }}
+                    >
+                      {l.label}
+                      <span className="link-arrow">→</span>
+                    </button>
+                  ) : (
+                    <Link key={l.label} href={l.href} className="footer-link">
+                      {l.label}
+                      <span className="link-arrow">→</span>
+                    </Link>
+                  )
                 ))}
               </div>
             </div>

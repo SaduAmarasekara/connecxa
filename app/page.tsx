@@ -29,8 +29,7 @@ export default function Home() {
           </div>
 
           <h1 className="text-[42px] md:text-[64px] lg:text-[80px] font-black leading-[1.05] tracking-[-0.04em] text-[#111827] mb-8">
-            The easiest way to create <br className="hidden md:block" />
-            and share your <span className="text-[#005AD1]">Digital Business Card.</span>
+            Smart Networking for Elite Professionals<br className="hidden md:block" />
           </h1>
 
           <p className="text-[18px] md:text-[21px] text-[#4B5563] leading-[1.6] font-medium max-w-[800px] mb-12">
@@ -39,8 +38,8 @@ export default function Home() {
 
           {/* CTA Row */}
           <div className="flex flex-col sm:flex-row items-center gap-5 mb-16">
-            <Link href="/login" className="no-underline">
-              <button
+            <button
+                onClick={() => window.open(`${process.env.NEXT_PUBLIC_APP_URL}/login`, "_blank")}
                 style={{
                   background: "#005AD1",
                   color: "#fff",
@@ -71,7 +70,6 @@ export default function Home() {
               >
                 Get started <span style={{ fontSize: 20 }}>→</span>
               </button>
-            </Link>
             <Link href="/for-companies/teams" className="no-underline">
               <button
                 style={{

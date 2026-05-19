@@ -85,7 +85,6 @@ export default function BlogsPage() {
 
           {/* Sub-navigation */}
           <div className="flex items-center justify-center gap-6 mb-16" style={{ marginBottom: 20 }}>
-            <Link href="/resources/help-center" className="text-[16px] font-semibold text-gray-500 hover:text-[#005AD1] transition-colors">Help Center</Link>
             <Link href="/resources/blogs" className="text-[16px] font-semibold text-[#111] border-b-2 border-[#111] pb-0.5">Blog</Link>
             <Link href="/resources/case-studies" className="text-[16px] font-semibold text-gray-500 hover:text-[#005AD1] transition-colors">Case Studies</Link>
             <div className="text-gray-500 hover:text-[#005AD1] cursor-pointer transition-colors ml-2">

@@ -2,38 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useCart } from "@/lib/CartContext";
 
 const navLinks = [
-  {
-    label: "Shop",
-    hasDropdown: true,
-    dropdown: [
-      {
-        title: "NFC Business Cards",
-        icon: (
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#005AD1" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="sub-icon">
-            <path d="M4.9 19.1C3.1 17.3 2 14.8 2 12c0-2.8 1.1-5.3 2.9-7.1" />
-            <path d="M8.4 15.6c-.9-.9-1.5-2.2-1.5-3.6 0-1.4.6-2.7 1.5-3.6" />
-            <path d="M12 12h.01" />
-            <path d="M15.6 15.6c.9-.9 1.5-2.2 1.5-3.6 0-1.4-.6-2.7-1.5-3.6" />
-            <path d="M19.1 19.1c1.8-1.8 2.9-4.3 2.9-7.1 0-2.8-1.1-5.3-2.9-7.1" />
-          </svg>
-        ),
-        href: "/shop"
-      },
-      {
-        title: "All Products",
-        icon: (
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#005AD1" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="sub-icon">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-            <path d="M3 6h18" />
-            <path d="M16 10a4 4 0 0 1-8 0" />
-          </svg>
-        ),
-        href: "/shop/products"
-      }
-    ]
-  },
+  { label: "Shop", href: "/shop", hasDropdown: false },
   {
     label: "Features",
     hasDropdown: true,
@@ -88,11 +60,21 @@ const navLinks = [
     ]
   },
   {
-    label: "For Companies",
+    label: "Solutions",
     hasDropdown: true,
     dropdown: [
       {
-        title: "Connecxa for Teams",
+        title: "For Individuals",
+        icon: (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#005AD1" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="sub-icon">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        ),
+        href: "/for-companies/individuals"
+      },
+      {
+        title: "For Teams",
         icon: (
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#005AD1" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="sub-icon">
             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -115,17 +97,6 @@ const navLinks = [
           </svg>
         ),
         href: "/for-companies/corporate-gifting"
-      },
-      {
-        title: "NFC Live Printing for Events",
-        icon: (
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#005AD1" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="sub-icon">
-            <polyline points="6 9 6 2 18 2 18 9" />
-            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-            <rect x="6" y="14" width="12" height="8" />
-          </svg>
-        ),
-        href: "/for-companies/nfc-events"
       }
     ]
   },
@@ -134,17 +105,7 @@ const navLinks = [
     label: "Resources",
     hasDropdown: true,
     dropdown: [
-      {
-        title: "Help Center",
-        icon: (
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#005AD1" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="sub-icon">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-            <line x1="12" y1="17" x2="12.01" y2="17" />
-          </svg>
-        ),
-        href: "/resources/help-center"
-      },
+
       {
         title: "FAQs",
         icon: (
@@ -175,7 +136,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
-  const [cartCount] = useState(0);
+  const { count: cartCount } = useCart();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -573,12 +534,10 @@ export default function Navbar() {
                 <button className="btn-demo">Get a Demo</button>
               </Link>
 
-              <Link href="/login" style={{ textDecoration: 'none' }}>
-                <button className="btn-login">
-                  Log In
-                  <span className="arrow">→</span>
-                </button>
-              </Link>
+              <button className="btn-login" onClick={() => window.open(`${process.env.NEXT_PUBLIC_APP_URL}/login`, '_blank')}>
+                Log In
+                <span className="arrow">→</span>
+              </button>
 
               <div className="nav-divider" />
 
@@ -738,6 +697,7 @@ export default function Navbar() {
                 width: "100%",
                 boxShadow: "0 6px 24px rgba(0,102,255,0.3)",
               }}
+              onClick={() => window.open(`${process.env.NEXT_PUBLIC_APP_URL}/login`, '_blank')}
             >
               Log In →
             </button>

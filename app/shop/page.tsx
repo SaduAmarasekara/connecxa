@@ -181,25 +181,31 @@ export default function ShopPage() {
                     fontSize: "17px",
                     fontWeight: 700,
                     borderRadius: "999px",
-                    padding: "15px 32px",
+                    padding: "16px 40px",
                     border: "1.5px solid rgba(0,90,209,0.2)",
                     cursor: "pointer",
                     display: "inline-flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    gap: "8px",
+                    gap: "10px",
                     width: "100%",
+                    boxShadow: "0 8px 32px rgba(0,90,209,0.05)",
                     backdropFilter: "blur(8px)",
-                    transition: "all 0.2s ease",
+                    transition: "all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)",
                     letterSpacing: "-0.01em",
+                    whiteSpace: "nowrap",
                   }}
                   onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
                     e.currentTarget.style.background = "rgba(0,90,209,0.06)";
                     e.currentTarget.style.borderColor = "rgba(0,90,209,0.4)";
+                    e.currentTarget.style.boxShadow = "0 16px 40px rgba(0,90,209,0.1)";
                   }}
                   onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
                     e.currentTarget.style.background = "rgba(255,255,255,0.7)";
                     e.currentTarget.style.borderColor = "rgba(0,90,209,0.2)";
+                    e.currentTarget.style.boxShadow = "0 8px 32px rgba(0,90,209,0.05)";
                   }}
                 >
                   See how it works
@@ -298,8 +304,7 @@ export default function ShopPage() {
       `}</style>
 
       <div className="w-full">
-        <div className="w-full h-16 lg:h-24 bg-white" />
-        <NutshellFeatures />
+        
         <div className="w-full h-16 lg:h-24 bg-white" />
         <CardShowcase />
         <div className="w-full h-16 lg:h-24 bg-white" />
